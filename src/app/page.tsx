@@ -1,13 +1,13 @@
 "use client";
-import AboutMeCard from "@/components/AboutMeCard";
+import SlideShowCard from "@/components/SlideShowCard";
 import React from "react";
-import { useInView } from "react-intersection-observer";
 
-const Resume = () => {
+const Home = () => {
 	return (
-		<div className='w-screen'> 
+		<div className="w-screen">
+			<SlideShowCard />
 		</div>
 	);
 };
 
-export default Resume;
+export default Home;

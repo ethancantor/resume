@@ -19,8 +19,10 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <AboutMeCard />
-        {children}
-      Q</body>
+        <div className="ms-56 overflow-x-clip">
+          {children}
+        </div>
+      </body>
     </html>
   );
 }

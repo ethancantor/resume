@@ -8,7 +8,7 @@ const FONT = Kode_Mono({subsets: ['latin'], weight: '400'});
 
 export default function AboutMeCard() {
     return (
-        <div className="h-full px-3 py-4 overflow-y-auto bg-raisin flex flex-col items-center fixed top-0 left-0 z-40 w-52 transition-transform -translate-x-full sm:translate-x-0">
+        <div className="fixed h-screen px-3 py-4 bg-raisin flex flex-col items-center top-0 left-0 z-40 w-52 transition-transform -translate-x-full sm:translate-x-0 ">
             <Image className="w-24 h-24 mb-3 rounded-full shadow-lg border-4 border-primary" src={Avatar} alt="Ethan image" width='64' height='64' unoptimized/>
             <div className="flex flex-col gap-2 pb-2 items-center text-center">
                 <div className={FONT.className + ' text-white text-lg'}>Ethan Cantor</div>
