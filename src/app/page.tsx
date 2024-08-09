@@ -6,7 +6,6 @@ import { useInView } from "react-intersection-observer";
 const Resume = () => {
 	return (
 		<div className='w-screen'> 
-			<AboutMeCard />
 		</div>
 	);
 };
