@@ -22,7 +22,7 @@ export default function MusicBackground() {
         setTimeout(() => {
             setPath1EndIndex(!pathEnd1Index)
         }, 5000);
-    })
+    }, []);
 
     return (
         <div className='fixed -z-10 outline outline-1 h-[100vh] min-w-[100vw] top-0'>

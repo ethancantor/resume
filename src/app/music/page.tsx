@@ -10,7 +10,7 @@ import MusicBackground from '@/components/MusicBackground';
 import { Kode_Mono } from 'next/font/google';
 import YoutubeHover from '@/components/YoutubeHover';
 
-const FONT = Kode_Mono({subsets: ['latin'], weight: '600'});
+const FONT = Kode_Mono({subsets: ['latin'], weight: '600', display: 'swap'});
 
 export default function MusicGallery() {
     return (
@@ -31,8 +31,8 @@ export default function MusicGallery() {
                 <div className={'text-6xl mt-5 ' + FONT.className}>Particle World Audio Visualizer</div>
                 <div className='flex flex-wrap gap-5 mt-5 items-center justify-center'>
                     <YoutubeHover link={"https://www.youtube.com/embed/cuurkWtiKXk?si=In0DLi977rOsa0BR"} name='How It Ends' date='Febuary 21, 2023'/>
-                    <YoutubeHover link={"https://www.youtube.com/embed/Wltj4XmKV3w?si=qEMUJ48trTTXEewy"} name='Vines on the Window' date='December 22, 2022'/>
                     <YoutubeHover link={"https://www.youtube.com/embed/Ptw5K-fu3M8?si=RHqIVH0lfEmBaHqM"} name='Vines on the Window' date='December 13, 2022'/>
+                    <YoutubeHover link={"https://www.youtube.com/embed/Wltj4XmKV3w?si=qEMUJ48trTTXEewy"} name='Balance' date='December 22, 2022'/>
                 </div>
             </div>
         </div>
