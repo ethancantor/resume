@@ -3,7 +3,7 @@ import Image, { StaticImageData } from 'next/image';
 import React from 'react'
 import Link from 'next/link';
 
-const FONT = Kode_Mono({subsets: ['latin'], weight: '400'});
+const FONT = Kode_Mono({subsets: ['latin'], weight: '400', display: 'swap'});
 
 interface Props {
     href?: string;
