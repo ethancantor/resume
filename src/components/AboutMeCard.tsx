@@ -4,7 +4,7 @@ import Avatar from '@/pictures/ethanface.png';
 import Link from 'next/link';
 import { Kode_Mono } from 'next/font/google';
 
-const FONT = Kode_Mono({subsets: ['latin'], weight: '400'});
+const FONT = Kode_Mono({subsets: ['latin'], weight: '400', display: 'swap'});
 
 export default function AboutMeCard() {
     return (

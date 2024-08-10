@@ -3,7 +3,7 @@ import { Inter, Josefin_Sans, Mukta } from "next/font/google";
 import "./globals.css";
 import AboutMeCard from "@/components/AboutMeCard";
 
-const inter = Josefin_Sans({ subsets: ["latin"], weight: '500' });
+const inter = Josefin_Sans({ subsets: ["latin"], weight: '500', display: 'swap' });
 
 export const metadata: Metadata = {
   title: "Resume Ethan Cantor",
