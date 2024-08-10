@@ -1,12 +1,12 @@
-"use client";
+// "use client";
 import SlideShowCard from "@/components/SlideShowCard";
 import React from "react";
+import Gallery from "@/components/Gallery";
 
 const Home = () => {
 	return (
-		<div className="w-screen">
-			<SlideShowCard />
-		</div>
+		// <Gallery />
+		''
 	);
 };
 

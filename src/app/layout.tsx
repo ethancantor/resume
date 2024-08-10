@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Josefin_Sans, Mukta } from "next/font/google";
 import "./globals.css";
 import AboutMeCard from "@/components/AboutMeCard";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Josefin_Sans({ subsets: ["latin"], weight: '500' });
 
 export const metadata: Metadata = {
   title: "Resume Ethan Cantor",
