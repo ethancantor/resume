@@ -25,7 +25,7 @@ export default function MusicBackground() {
     })
 
     return (
-        <div className='fixed -z-10 outline outline-1 min-h-[100vh] min-w-[100vw] top-0'>
+        <div className='fixed -z-10 outline outline-1 h-[100vh] min-w-[100vw] top-0'>
             <svg className='flex-no-shrink fill-current' fill='none' viewBox='0 0 1920 1080' id="visual" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" version="1.1">
                 <rect x="0" y="0" width="1920" height="1080" fill="#2f3138" />
                 <g transform="translate(1920, 1080)">
