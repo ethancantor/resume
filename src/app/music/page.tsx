@@ -7,17 +7,16 @@ import Dystopia from '@/pictures/albums/dystopiaart.jpg';
 import IL from '@/pictures/albums/imaginarylabyrinthart.jpg';
 import MH from '@/pictures/albums/movinghomeart.jpg';
 import MusicBackground from '@/components/MusicBackground';
-import { Kode_Mono } from 'next/font/google';
 import YoutubeHover from '@/components/YoutubeHover';
+import { TITLE_FONT } from '@/fonts';
 
-const FONT = Kode_Mono({subsets: ['latin'], weight: '600', display: 'swap'});
 
 export default function MusicGallery() {
     return (
         <div className='flex flex-col items-center justify-center'>
             <MusicBackground />
-            <div className='h-screen w-screen flex flex-col justify-center items-center p-32'>
-                <div className={'text-6xl mt-5 ' + FONT.className}>Published Music</div>
+            <div className='min-h-screen w-screen flex flex-col justify-center items-center p-32 '>
+                <div className={'text-6xl mt-5 ' + TITLE_FONT.className}>Published Music</div>
                 <div className='flex flex-wrap gap-5 mt-5 items-center justify-center'>
                     <AlbumHover link='https://open.spotify.com/album/4izlw6GpcopeHemIbyrPbX?si=T3pqJEoyQomcjuUVTmOoSw' name='Balance' art={Balance} date={'October 10, 2023'}/>
                     <AlbumHover link='https://open.spotify.com/album/2TzPdiNepQo37w4vdxGBWd?si=ed0f1b3a87224c2d' name='Deciding to Feel Better' art={DTFB} date={'May 15, 2022'}/>
@@ -27,8 +26,8 @@ export default function MusicGallery() {
                     <AlbumHover link='https://open.spotify.com/album/7N3EtSpqOvf86drzAyPyVI?si=8LkAp2HcS4WelVgHeeMkOQ' name='Moving Home' art={MH} date={'June 9, 2019'}/>
                 </div>
             </div>
-            <div className='h-screen w-screen flex flex-col justify-center items-center p-32'>
-                <div className={'text-6xl mt-5 ' + FONT.className}>Particle World Audio Visualizer</div>
+            <div className='min-h-screen w-screen flex flex-col justify-center items-center p-32'>
+                <div className={'text-6xl mt-5 ' + TITLE_FONT.className}>Particle World Audio Visualizer</div>
                 <div className='flex flex-wrap gap-5 mt-5 items-center justify-center'>
                     <YoutubeHover link={"https://www.youtube.com/embed/cuurkWtiKXk?si=In0DLi977rOsa0BR"} name='How It Ends' date='Febuary 21, 2023'/>
                     <YoutubeHover link={"https://www.youtube.com/embed/Ptw5K-fu3M8?si=RHqIVH0lfEmBaHqM"} name='Vines on the Window' date='December 13, 2022'/>

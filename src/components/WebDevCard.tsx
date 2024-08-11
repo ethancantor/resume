@@ -1,13 +1,49 @@
 "use client";
 import Image from 'next/image'
-import React from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import EternalSS from '@/pictures/sites/eternalSS.png';
-import { Kode_Mono } from 'next/font/google';
-import { motion } from 'framer-motion';
+import { motion, useScroll, useSpring } from 'framer-motion';
+import { useWidth } from '@/hooks/use-width';
+import { TITLE_FONT } from '@/fonts';
 
-const FONT = Kode_Mono({subsets: ['latin'], weight: '600', display: 'swap'});
 
-export default function WebDevCard() {
+interface Props {
+    fromRight?: boolean;
+    imageRight?: boolean;
+}
+
+export default function WebDevCard({fromRight, imageRight}: Props) {
+
+    if(!fromRight) fromRight = false;
+    if(!imageRight) imageRight = false;
+
+    const width = useWidth();
+    const [boxX, setBoxX] = useState(fromRight ? width : -width);
+    const slideBoxRef = useRef(null);
+
+    const { scrollYProgress } = useScroll({
+        target: slideBoxRef,
+        offset: ["start end", "end end"]
+    });
+
+    const springY = useSpring(scrollYProgress, { bounce: 0});
+
+    const OFFSET = 0.25;
+
+    useEffect(() => {
+        springY.on('change', (latest) => {
+            if(fromRight){
+                let xpos = width - width * (latest + OFFSET);
+                if(xpos < 0) xpos = 0;
+                setBoxX(xpos);
+            }
+            else {
+                let xpos = -width + width * (latest + OFFSET);
+                if(xpos > 0) xpos = 0;
+                setBoxX(xpos);
+            }
+        });
+    });
 
     const cascadeList = (listNum: number) => {
         return {
@@ -23,15 +59,16 @@ export default function WebDevCard() {
     }
 
     return (
-        <div className='max-h-screen flex justify-center overflow-hidden'>
-            <motion.div className="grid grid-cols-3 items-center bg-raisin-dark border border-raisin-light rounded-lg shadow-2xl h-[55vh]"
-                initial={{width: 0, opacity: 0}}
-                whileInView={{width: '100%', opacity: 100}}
-                transition={{duration: .5, ease: 'easeInOut'}}
-            >
-                <Image className="object-cover rounded-t-lg rounded-xl h-full col-span-2" src={EternalSS} alt="Eternal Esports Club" />
+        <motion.div className='max-h-screen flex justify-center overflow-hidden' style={{x: boxX }} ref={slideBoxRef}>
+            <div className="grid grid-cols-3 items-center bg-raisin-dark border border-raisin-light rounded-lg shadow-2xl h-[55vh]">
+                {
+                    imageRight ? 
+                    <div className='rounded-xl h-full col-span-2 overflow-clip' >
+                        <Image className="object-cover h-full " src={EternalSS} alt="Eternal Esports Club" /> 
+                    </div> : ''
+                }
                 <div className="flex flex-col justify-between p-4 leading-normal ms-4">
-                    <h5 className={"mb-2 text-3xl font-bold tracking-tight text-white " + FONT.className}>Eternal Esports Club</h5>
+                    <h5 className={"mb-2 text-3xl font-bold tracking-tight text-white " + TITLE_FONT.className}>Eternal Esports Club</h5>
                     <div className="mb-3 text-gray-400">
                         <ul className='list-disc p-4'>
                             <motion.li
@@ -57,7 +94,13 @@ export default function WebDevCard() {
                         </ul>
                     </div>
                 </div>
-            </motion.div>
-        </div>
+                {
+                    !imageRight ? 
+                    <div className='rounded-xl h-full col-span-2 overflow-clip' >
+                        <Image className="object-cover h-full " src={EternalSS} alt="Eternal Esports Club" /> 
+                    </div> : ''
+                }
+            </div>
+        </motion.div>
     )
 }

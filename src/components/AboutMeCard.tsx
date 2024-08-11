@@ -2,9 +2,7 @@ import React from 'react'
 import Image from 'next/image'
 import Avatar from '@/pictures/ethanface.png';
 import Link from 'next/link';
-import { Kode_Mono } from 'next/font/google';
-
-const FONT = Kode_Mono({subsets: ['latin'], weight: '400', display: 'swap'});
+import { TITLE_FONT } from '@/fonts';
 
 export default function AboutMeCard() {
     return (
@@ -13,7 +11,7 @@ export default function AboutMeCard() {
                 <Image className="w-24 h-24 mb-3 rounded-full shadow-lg border-4 border-primary" src={Avatar} alt="Ethan image" width='64' height='64' unoptimized/>
             </Link>
             <div className="flex flex-col gap-2 pb-2 items-center text-center">
-                <div className={FONT.className + ' text-white text-lg'}>Ethan Cantor</div>
+                <div className={TITLE_FONT.className + ' text-white text-lg'}>Ethan Cantor</div>
                 <div className='text-gray-300 text-sm hover:text-primary transition-all'>
                     <Link href={'mailto:ethan.cantor99@gmail.com'}>
                         ethan.cantor99@gmail.com
@@ -48,7 +46,7 @@ export default function AboutMeCard() {
                 </li>
             </ul>
             <div className='flex flex-col gap-2 items-center text-center mt-3'>
-                <div className={FONT.className + ' text-white text-lg'}>Skills</div>
+                <div className={TITLE_FONT.className + ' text-white text-lg'}>Skills</div>
                 <div className='grid grid-cols-2 text-center'>
                     <div className='text-gray-300 text-sm'>JavaScript</div>
                     <div className='text-gray-300 text-sm'>TypeScript</div>
