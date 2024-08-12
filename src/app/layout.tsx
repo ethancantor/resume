@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
-import { Inter, Josefin_Sans, Mukta } from "next/font/google";
 import "./globals.css";
-import AboutMeCard from "@/components/AboutMeCard";
-
-const inter = Josefin_Sans({ subsets: ["latin"], weight: '500', display: 'swap' });
+import SidebarCard from "@/components/Sidebar";
+import { BODY_FONT } from "@/fonts";
 
 export const metadata: Metadata = {
   title: "Resume Ethan Cantor",
@@ -17,9 +15,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <AboutMeCard />
-        <div className="ms-56 overflow-x-clip">
+      <body className={BODY_FONT.className + ' flex flex-row'}>
+        <SidebarCard />
+        <div className="ms-52 w-[calc(100vw-13rem)] outline outline-3 overflow-x-clip">
           {children}
         </div>
       </body>
