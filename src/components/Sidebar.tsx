@@ -17,7 +17,6 @@ export default function SidebarCard() {
                         ethan.cantor99@gmail.com
                     </Link>
                 </div>
-                
             </div>
             <ul className="space-x-3 font-medium flex flex-row">
                 <li>
@@ -60,6 +59,7 @@ export default function SidebarCard() {
                     <div className='text-gray-300 text-sm'>C++</div>
                 </div>
             </div>
+            
         </div>
     )
 }

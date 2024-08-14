@@ -2,15 +2,11 @@
 import React from "react";
 import { AboutMePage } from "@/components/AboutMePage";
 import { ProjectsPage } from "@/components/ProjectsPage";
-import MusicBackground from "@/components/MusicBackground";
 import SecondBackground from "@/components/SecondBackground";
-import { useColorCalc } from "@/hooks/colorCalc";
+// import { useColorCalc } from "@/hooks/colorCalc";
 
 
 const Home = () => {
-
-	console.log(useColorCalc('#212227', '#9b53ed', 4));
-
 	return (
         <div className='flex items-center justify-center flex-col'>
             <SecondBackground />

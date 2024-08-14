@@ -1,13 +1,16 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import { TITLE_FONT } from '@/fonts'
+import { StaticImageData } from 'next/image';
+import { Icon } from './Icon';
 
 interface Props {
     title: string;
     bullets: string[];
+    icons?: (string | StaticImageData)[];
 }
 
-export const CardContent = ({title, bullets}: Props) => {
+export const CardContent = ({title, bullets, icons}: Props) => {
 
     const cascadeList = (listNum: number) => {
         return {
@@ -40,6 +43,13 @@ export const CardContent = ({title, bullets}: Props) => {
                         )
                     })}
                 </ul>
+                <div className='flex flex-row flex-shrink-0 gap-x-5 items-center justify-center'>
+                    { icons && icons.map((icon, index) => {
+                        return (
+                            <Icon icon={icon} key={index}/>
+                        )
+                    })}
+                </div>
             </div>
         </div>
     )
