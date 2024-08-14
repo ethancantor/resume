@@ -8,6 +8,7 @@ import { TITLE_FONT } from '@/fonts';
 import {motion} from 'framer-motion';
 
 export const MobileNavbar = () => {
+
     const [expanded, setExpanded] = useState<boolean>(false);
     return (
         <>
@@ -16,7 +17,7 @@ export const MobileNavbar = () => {
                     onClick={() => setExpanded(!expanded)}/>
             </div>
             <motion.div className={`${expanded? '' : 'hidden'} bg-raisin-dark z-10 flex flex-col items-center fixed h-screen`}
-                animate={{}}
+                animate={expanded} 
             >
                 <Link href='/'>
                     <Image className="w-24 h-24 mb-3 rounded-full shadow-lg border-4 border-primary" src={Avatar} alt="Ethan image" width='64' height='64' unoptimized/>
