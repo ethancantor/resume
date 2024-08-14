@@ -5,6 +5,7 @@ import Hamburger from '@/pictures/icons/burger-menu-svgrepo-com.svg';
 import Link from 'next/link';
 import Avatar from '@/pictures/ethanface.png';
 import { TITLE_FONT } from '@/fonts';
+import {motion} from 'framer-motion';
 
 export const MobileNavbar = () => {
     const [expanded, setExpanded] = useState<boolean>(false);
@@ -14,7 +15,9 @@ export const MobileNavbar = () => {
                 <Image src={Hamburger} alt='hamburger' className='mt-auto mb-auto me-5 invert' width={45} height={45} 
                     onClick={() => setExpanded(!expanded)}/>
             </div>
-            <div className={`${expanded? '' : 'hidden'} bg-raisin-dark z-10 flex flex-col items-center`}>
+            <motion.div className={`${expanded? '' : 'hidden'} bg-raisin-dark z-10 flex flex-col items-center fixed h-screen`}
+                animate={{}}
+            >
                 <Link href='/'>
                     <Image className="w-24 h-24 mb-3 rounded-full shadow-lg border-4 border-primary" src={Avatar} alt="Ethan image" width='64' height='64' unoptimized/>
                 </Link>
@@ -67,7 +70,7 @@ export const MobileNavbar = () => {
                         <div className='text-gray-300 text-sm'>C++</div>
                     </div>
                 </div>
-            </div>
+            </motion.div>
         </>
     )
 };

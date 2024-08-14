@@ -12,7 +12,7 @@ export default function SidebarCard() {
             <Link href='/'>
                 <Image className="w-24 h-24 mb-3 rounded-full shadow-lg border-4 border-primary" src={Avatar} alt="Ethan image" width='64' height='64' unoptimized/>
             </Link>
-            <div className="flex flex-col gap-2 pb-2 items-center text-center fixed">
+            <div className="flex flex-col gap-2 pb-2 items-center text-center">
                 <div className={TITLE_FONT.className + ' text-white text-lg'}>Ethan Cantor</div>
                 <div className='text-gray-300 text-sm hover:text-primary transition-all'>
                     <Link href={'mailto:ethan.cantor99@gmail.com'}>
