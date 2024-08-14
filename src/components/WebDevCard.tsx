@@ -47,6 +47,23 @@ export default function WebDevCard({fromRight, imageRight, image, children, link
         });
     });
 
+    const isMobile = useWidth() < 500;
+
+    if(isMobile) {
+        return (
+            <motion.div className='max-h-screen flex justify-center overflow-hidden w-[calc(100vw-10px)]' style={{x: boxX }} ref={slideBoxRef} >
+                <div className="grid grid-cols-1 items-center bg-raisin-dark border border-raisin-light rounded-lg shadow-2xl">
+                    <div className={'rounded-xl h-full col-span-2 overflow-clip ' + (imageRight ? 'order-first' : 'order-last')} >
+                        <Link href={link || ''} className={(link ? 'cursor-pointer' : 'pointer-events-none')}>
+                            <Image className="object-cover h-full" src={image} alt="Card image" /> 
+                        </Link>
+                    </div>
+                    {children}
+                </div>
+            </motion.div>
+        )
+    }
+
     return (
         <motion.div className='max-h-screen flex justify-center overflow-hidden' style={{x: boxX }} ref={slideBoxRef}>
             <div className="grid grid-cols-3 items-center bg-raisin-dark border border-raisin-light rounded-lg shadow-2xl h-[55vh]">
