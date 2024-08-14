@@ -1,12 +1,19 @@
 "use client";
 
+import { useWidth } from "@/hooks/use-width";
+
 interface Props { link: string; name: string; date: string}
 
 export default function YoutubeHover({link, name, date}: Props) {
 
+    const isMobile = useWidth() < 500;
+
     return (
-        <div className='bg-raisin-dark rounded-lg p-4 relative flex flex-col justify-center items-center'>
-            <iframe width="560" height="315" src={link} 
+        <div className={`bg-raisin-dark rounded-lg p-4 relative flex flex-col justify-center items-center ${isMobile ? 'w-[100%]' : 'w-[33%] h-full'}`}>
+            <iframe
+                width={250}
+                height={'100%'}
+                src={link} 
                 title={name}
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                 referrerPolicy="strict-origin-when-cross-origin" 
