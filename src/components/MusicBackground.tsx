@@ -14,18 +14,20 @@ export default function MusicBackground() {
         pathStart2: pathStart2[pathEnd1Index ? 0 : 1],
         pathStart3: pathStart3[pathEnd1Index ? 0 : 1],
         config: {
-            friction: 500
+            duration: 10000
         }
     })
 
     useEffect(() => {
-        setTimeout(() => {
-            setPath1EndIndex(!pathEnd1Index)
-        }, 5000);
-    }, []);
+        const interval = setInterval(() => {
+            setPath1EndIndex(!pathEnd1Index);
+        }, 10000);
+ 
+        return () => clearInterval(interval);
+    }, [pathEnd1Index]);
 
     return (
-        <div className='fixed -z-10 outline outline-1 h-[100vh] min-w-[100vw] top-0'>
+        <div className='fixed -z-20 h-[100vh] min-w-[100vw] top-0'>
             <svg className='flex-no-shrink fill-current' fill='none' viewBox='0 0 1920 1080' id="visual" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" version="1.1">
                 <rect x="0" y="0" width="1920" height="1080" fill="#2f3138" />
                 <g transform="translate(1920, 1080)">

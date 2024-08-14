@@ -17,7 +17,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={BODY_FONT.className + ' flex flex-row'}>
         <SidebarCard />
-        <div className="ms-52 w-[calc(100vw-13rem)] outline outline-3 overflow-x-clip">
+        <div className="ms-52 w-[calc(100vw-13rem)] overflow-x-clip">
           {children}
         </div>
       </body>
