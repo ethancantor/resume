@@ -4,6 +4,8 @@ import Image from 'next/image'
 import Avatar from '@/pictures/ethanface.png';
 import Link from 'next/link';
 import { TITLE_FONT } from '@/fonts';
+import { AboutMeIcon } from './AboutMeIcon';
+import * as Icons from '@/pictures/logos/logos.index';
 
 export default function SidebarCard() {
 
@@ -48,17 +50,18 @@ export default function SidebarCard() {
             </ul>
             <div className='flex flex-col gap-2 items-center text-center mt-3'>
                 <div className={TITLE_FONT.className + ' text-white text-lg'}>Skills</div>
-                <div className='grid grid-cols-2 text-center'>
-                    <div className='text-gray-300 text-sm'>JavaScript</div>
-                    <div className='text-gray-300 text-sm'>TypeScript</div>
-                    <div className='text-gray-300 text-sm'>Next.js</div>
-                    <div className='text-gray-300 text-sm'>React.js</div>
-                    <div className='text-gray-300 text-sm'>Node.js</div>
-                    <div className='text-gray-300 text-sm'>TailwindCSS</div>
-                    <div className='text-gray-300 text-sm'>Python</div>
-                    <div className='text-gray-300 text-sm'>Java</div>
-                    <div className='text-gray-300 text-sm'>C</div>
-                    <div className='text-gray-300 text-sm'>C++</div>
+                <div className='grid grid-cols-2 text-center items-center justify-center gap-3'>
+                    <AboutMeIcon icon={Icons.NextIcon} name='Next.js' />
+                    <AboutMeIcon icon={Icons.ReactIcon} name='React.js' />
+                    <AboutMeIcon icon={Icons.NodeIcon} name='Node.js' />
+                    <AboutMeIcon icon={Icons.JavaScriptIcon} name='JavaScript' />
+                    <AboutMeIcon icon={Icons.TypeScriptIcon} name='TypeScript' />
+                    <AboutMeIcon icon={Icons.TailwindIcon} name='TailwindCSS' />
+                    <AboutMeIcon icon={Icons.PythonIcon} name='Python' />
+                    <AboutMeIcon icon={Icons.MySQLIcon} name='MySQL' />
+                    <AboutMeIcon icon={Icons.JavaIcon} name='Java' />
+                    <AboutMeIcon icon={Icons.CIcon} name='C' />
+                    <AboutMeIcon icon={Icons.CPlusIcon} name='C++' />
                 </div>
             </div>
             

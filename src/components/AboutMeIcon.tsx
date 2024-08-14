@@ -9,7 +9,7 @@ interface Props {
 
 export const AboutMeIcon = ({icon, name}: Props) => {
     return (
-        <div className='flex flex-col space-y-2 text-gray-300 text-sm max-h-16 max-w-16 outline outline-white'>
+        <div className='grid grid-cols-1 justify-center items-center space-y-2 text-gray-300 text-sm max-h-16 max-w-16'>
             <Icon icon={icon} width={16} height={16}/>
             {name}
         </div>

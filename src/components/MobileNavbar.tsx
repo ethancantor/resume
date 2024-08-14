@@ -30,7 +30,7 @@ export const MobileNavbar = () => {
             <div className='bg-raisin-dark w-screen h-16 fixed object-contain flex justify-end items-end'>
                 <HambugerButton onClick={() => setExpanded(!expanded)}/>
             </div>
-            <motion.div className={`bg-raisin-dark z-10 flex flex-col space-y-4 items-center fixed h-screen max-w-56`}
+            <motion.div className={`bg-raisin-dark z-40 flex flex-col space-y-4 items-center fixed h-screen max-w-56`}
                 animate={expanded ? 'show' : 'hide'} variants={variants} initial={variants.hide}
             >
                 <Link href='/' className='mt-3 flex flex-col justify-center items-center'>
