@@ -6,6 +6,7 @@ import Link from 'next/link';
 import { TITLE_FONT } from '@/fonts';
 import { AboutMeIcon } from './AboutMeIcon';
 import * as Icons from '@/pictures/logos/logos.index';
+import { IconArrangement } from './IconArrangement';
 
 export default function SidebarCard() {
 
@@ -50,7 +51,7 @@ export default function SidebarCard() {
             </ul>
             <div className='flex flex-col gap-2 items-center text-center mt-3'>
                 <div className={TITLE_FONT.className + ' text-white text-lg'}>Skills</div>
-                <div className='grid grid-cols-2 text-center items-center justify-center gap-3'>
+                <IconArrangement>
                     <AboutMeIcon icon={Icons.NextIcon} name='Next.js' />
                     <AboutMeIcon icon={Icons.ReactIcon} name='React.js' />
                     <AboutMeIcon icon={Icons.NodeIcon} name='Node.js' />
@@ -62,7 +63,7 @@ export default function SidebarCard() {
                     <AboutMeIcon icon={Icons.JavaIcon} name='Java' />
                     <AboutMeIcon icon={Icons.CIcon} name='C' />
                     <AboutMeIcon icon={Icons.CPlusIcon} name='C++' />
-                </div>
+                </IconArrangement>
             </div>
             
         </div>

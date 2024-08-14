@@ -9,8 +9,7 @@ import MySQLIcon from '@/pictures/logos/mysql-2.svg';
 import NodeIcon from '@/pictures/logos/nodejs-icon.svg';
 import PythonIcon from '@/pictures/logos/python-5.svg';
 import ReactIcon from '@/pictures/logos/react-2.svg';
-import NextAuthIcon from '@/pictures/logos/next-auth.svg'
-import { Icon } from './Icon';
+import NextAuthIcon from '@/pictures/logos/next-auth.svg';
 
 export const ProjectsPage = () => {
 
@@ -27,7 +26,8 @@ export const ProjectsPage = () => {
                             'Used Python, MySQL, and Next.js/Express.js to analyze, store, and display player and match information',
                             'Developed custom REST API to allow community developers access to data'
                         ]}
-                        icons={[NextIcon, NextAuthIcon, ReactIcon, NodeIcon, MySQLIcon, PythonIcon, ]}
+                        icons={[{icon: NextIcon, name: 'Next.js'}, {icon: NextAuthIcon, name: 'NextAuth'}, {icon: ReactIcon, name: 'React.js'}, 
+                            {icon: NodeIcon, name: 'Node.js'}, {icon: MySQLIcon, name: 'MySQL'}, {icon: PythonIcon, name: 'Python'}, ]}
                     />
                 </WebDevCard>
                 <WebDevCard image={EthanSS} imageRight link="https://ethanhen.com">
@@ -37,7 +37,7 @@ export const ProjectsPage = () => {
                             'Constructed a robust file system to view and download files from a protected server folder',
                             'Created role based logins with NextAuth to give admins permissions to upload files'
                         ]}
-                        icons={[NextIcon, NextAuthIcon, ReactIcon, ]}    
+                        icons={[{icon: NextIcon, name: 'Next.js'}, {icon: NextAuthIcon, name: 'NextAuth'}, {icon: ReactIcon, name: 'React.js'}, ]}    
                     />
                 </WebDevCard>
             </div>

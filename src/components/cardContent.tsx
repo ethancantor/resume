@@ -3,11 +3,12 @@ import { motion } from 'framer-motion'
 import { TITLE_FONT } from '@/fonts'
 import { StaticImageData } from 'next/image';
 import { Icon } from './Icon';
+import { HexIcon } from './HexIcon';
 
 interface Props {
     title: string;
     bullets: string[];
-    icons?: (string | StaticImageData)[];
+    icons?: ({icon: string | StaticImageData, name: string})[];
 }
 
 export const CardContent = ({title, bullets, icons}: Props) => {
@@ -43,10 +44,10 @@ export const CardContent = ({title, bullets, icons}: Props) => {
                         )
                     })}
                 </ul>
-                <div className='flex flex-row flex-shrink-0 gap-x-5 items-center justify-center'>
+                <div className='flex flex-row flex-shrink-0 items-center justify-center'>
                     { icons && icons.map((icon, index) => {
                         return (
-                            <Icon icon={icon} key={index}/>
+                            <HexIcon icon={icon.icon} key={index} name={icon.name} />
                         )
                     })}
                 </div>
