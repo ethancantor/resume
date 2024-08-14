@@ -1,3 +1,4 @@
+'use client';
 import React from 'react'
 import Image from 'next/image'
 import Avatar from '@/pictures/ethanface.png';
@@ -5,8 +6,9 @@ import Link from 'next/link';
 import { TITLE_FONT } from '@/fonts';
 
 export default function SidebarCard() {
+
     return (
-        <div className="fixed h-screen px-3 py-4 bg-raisin-dark flex flex-col items-center top-0 left-0 z-40 w-52 transition-transform -translate-x-full sm:translate-x-0 ">
+        <div className={"fixed h-screen px-3 py-4 bg-raisin-dark flex flex-col items-center top-0 left-0 z-40 w-52 transition-transform -translate-x-full sm:translate-x-0 "}>
             <Link href='/'>
                 <Image className="w-24 h-24 mb-3 rounded-full shadow-lg border-4 border-primary" src={Avatar} alt="Ethan image" width='64' height='64' unoptimized/>
             </Link>
