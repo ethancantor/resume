@@ -6,18 +6,29 @@ import Link from 'next/link';
 import Avatar from '@/pictures/ethanface.png';
 import { TITLE_FONT } from '@/fonts';
 import {motion} from 'framer-motion';
+import { useWidth } from '@/hooks/use-width';
+import { HambugerButton } from './HambugerButton';
 
 export const MobileNavbar = () => {
 
     const [expanded, setExpanded] = useState<boolean>(false);
+
+    const width = useWidth();
+
+    const variants = {
+        show: { x: 0, opacity: 1, transition: { ease: 'easeInOut', duration: 0.3, }},
+        hide: { x: -width, opacity: 0, transition: { ease: 'easeInOut', duration: 0.3, }},
+    };
+
+    console.log(expanded);
+
     return (
-        <>
+        <div className=''>
             <div className='bg-raisin-dark w-screen h-16 fixed object-contain flex justify-end items-end'>
-                <Image src={Hamburger} alt='hamburger' className='mt-auto mb-auto me-5 invert' width={45} height={45} 
-                    onClick={() => setExpanded(!expanded)}/>
+                <HambugerButton onClick={() => setExpanded(!expanded)}/>
             </div>
-            <motion.div className={`${expanded? '' : 'hidden'} bg-raisin-dark z-10 flex flex-col items-center fixed h-screen`}
-                animate={expanded} 
+            <motion.div className={`bg-raisin-dark z-10 flex flex-col items-center fixed h-screen`}
+                animate={expanded ? 'show' : 'hide'} variants={variants} initial={variants.hide}
             >
                 <Link href='/'>
                     <Image className="w-24 h-24 mb-3 rounded-full shadow-lg border-4 border-primary" src={Avatar} alt="Ethan image" width='64' height='64' unoptimized/>
@@ -72,7 +83,7 @@ export const MobileNavbar = () => {
                     </div>
                 </div>
             </motion.div>
-        </>
+        </div>
     )
 };
 
