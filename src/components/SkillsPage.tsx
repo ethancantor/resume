@@ -1,42 +1,59 @@
-import React from 'react'
+'use client';
+import React, { useRef, useState } from 'react'
 import { TITLE_FONT } from '@/fonts';
-import { IconArrangement } from './IconArrangement';
 import { AboutMeIcon } from './AboutMeIcon';
 import * as Icons from '@/pictures/logos/logos.index';
-import { motion } from 'framer-motion';
+import { motion, useScroll, useTransform } from 'framer-motion';
 
 export const SkillsPage = () => {
 
+    const [selected, setSelected] = useState(-1);
+
     const skills = [
-        <AboutMeIcon icon={Icons.NextIcon} name='NextIcon' height={100} width={100} />,
-        <AboutMeIcon icon={Icons.ReactIcon} name='React.js' height={100} width={100} />,
-        <AboutMeIcon icon={Icons.NodeIcon} name='Node.js' height={100} width={100} />,
-        <AboutMeIcon icon={Icons.JavaScriptIcon} name='JavaScript' height={100} width={100} />,
-        <AboutMeIcon icon={Icons.TypeScriptIcon} name='TypeScript' height={100} width={100} />,
-        <AboutMeIcon icon={Icons.TailwindIcon} name='TailwindCSS' height={100} width={100} />,
-        <AboutMeIcon icon={Icons.PythonIcon} name='Python' height={100} width={100}  />,
-        <AboutMeIcon icon={Icons.MySQLIcon} name='MySQL' height={100} width={100} />,
-        <AboutMeIcon icon={Icons.JavaIcon} name='Java' height={100} width={100} />,
-        <AboutMeIcon icon={Icons.CIcon} name='C' height={100} width={100} />,
-        <AboutMeIcon icon={Icons.CPlusIcon} name='C++' height={100} width={100} />,
+        <AboutMeIcon icon={Icons.NextIcon} name='NextIcon' size={100}  />,
+        <AboutMeIcon icon={Icons.ReactIcon} name='React.js' size={100}  />,
+        <AboutMeIcon icon={Icons.NodeIcon} name='Node.js' size={100}  />,
+        <AboutMeIcon icon={Icons.JavaScriptIcon} name='JavaScript' size={100}  />,
+        <AboutMeIcon icon={Icons.TypeScriptIcon} name='TypeScript' size={100}  />,
+        <AboutMeIcon icon={Icons.TailwindIcon} name='TailwindCSS' size={100}  />,
+        <AboutMeIcon icon={Icons.GitHubIcon} name='GitHub' size={100} />,
+        <AboutMeIcon icon={Icons.PythonIcon} name='Python' size={100}   />,
+        <AboutMeIcon icon={Icons.MySQLIcon} name='MySQL' size={100}  />,
+        <AboutMeIcon icon={Icons.JavaIcon} name='Java' size={100}  />,
+        <AboutMeIcon icon={Icons.CIcon} name='C' size={100}  />,
+        <AboutMeIcon icon={Icons.CPlusIcon} name='C++' size={100} />,
     ]
 
-    const radius = 200;
-    const points = 6;
+    const radius = 300;
+    const points = skills.length / 2;
     const duration = 0.3;
+    const placeOffset = 0;
+    
+    const divRef = useRef(null);
+    const scroll = useScroll({target: divRef, 
+        offset: ["start end", "start start"] 
+    }); 
     
     return (
-        <div className='h-screen flex gap-1 items-center justify-center'>
+        <div className='h-screen flex gap-1 items-center justify-center' ref={divRef}>
             {skills && skills.map((skill, index) => {
-                const transX = Math.round(Math.sin(index * Math.PI / (points / skills.length )) * radius);
-                const transY = Math.round(Math.cos(index * Math.PI / (points / skills.length)) * radius);
+                const transX = Math.round(Math.sin((index + placeOffset) * Math.PI / (points)) * radius);
+                const transY = Math.round(Math.cos((index + placeOffset) * Math.PI / (points)) * radius);
+                console.log(transX, transY, index);
                 const variants = {
                     start: { x: 0, y: 0, },
                     end: { x: transX, y: transY, transition: { delay: duration / 2 * index, duration, ease: 'easeOut' }}
                 }
+
+                const transXanim = useTransform(scroll.scrollYProgress, [0, 1], [0, transX]);
+                const transYanim = useTransform(scroll.scrollYProgress, [0, 1], [0, transY]);
+
                 return (
-                    <motion.div className='absolute' key={index}
-                        variants={variants} initial={'start'} whileInView={'end'} 
+                    <motion.div className='absolute' key={index} onHoverStart={() => setSelected(index)} onHoverEnd={() => setSelected(-1)}
+                        // initial={'start'} 
+                        // variants={variants}
+                        // whileInView={'end'}
+                        style={{x: transXanim, y: transYanim}}
                     >{skill}</motion.div>
                 )
             })}

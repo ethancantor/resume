@@ -1,5 +1,6 @@
 import CIcon from '@/pictures/logos/c-1.svg';
 import CPlusIcon from '@/pictures/logos/c.svg';
+import GitHubIcon from '@/pictures/logos/github-142-svgrepo-com.svg';
 import JavaIcon from '@/pictures/logos/java-14.svg';
 import JavaScriptIcon from '@/pictures/logos/logo-javascript.svg';
 import MySQLIcon from '@/pictures/logos/mysql-2.svg';
@@ -11,6 +12,6 @@ import ReactIcon from '@/pictures/logos/react-2.svg';
 import TailwindIcon from '@/pictures/logos/tailwindcss.svg';
 import TypeScriptIcon from '@/pictures/logos/typescript.svg';
 
-export { CIcon, CPlusIcon, JavaIcon, JavaScriptIcon, MySQLIcon, NextAuthIcon, NextIcon, NodeIcon, PythonIcon, 
+export { CIcon, CPlusIcon, GitHubIcon, JavaIcon, JavaScriptIcon, MySQLIcon, NextAuthIcon, NextIcon, NodeIcon, PythonIcon, 
     ReactIcon, TailwindIcon, TypeScriptIcon, 
 }

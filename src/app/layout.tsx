@@ -31,8 +31,8 @@ export default async function RootLayout({
           </>
         :
           <>            
-            <SidebarCard />
-            <div className="ms-52 w-[calc(100vw-13rem)] overflow-x-clip">
+            {/* <SidebarCard /> */}
+            <div className="overflow-x-clip">
               {children}
             </div>
           </>

@@ -28,7 +28,7 @@ export default function WebDevCard({fromRight, imageRight, image, children, link
         offset: ["start end", "end end"]
     });
 
-    const springY = useSpring(scrollYProgress, { bounce: 0});
+    const springY = useSpring(scrollYProgress, { bounce: 0 });
 
     const OFFSET = 0.25;
 

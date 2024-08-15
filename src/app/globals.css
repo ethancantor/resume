@@ -25,3 +25,28 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+.hex {
+  position:relative;
+  --s:200px;
+  width: 200px;
+  height:calc(0.866*var(--s));
+}
+
+.hex div {
+  filter: url('#goo');
+  position:absolute;
+  inset:0;
+}
+
+.hex div::before{
+  content: "";
+  position:absolute;
+  inset:0;
+  background:#000;
+  clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+}
+.hex div:nth-child(2)::before{
+  background:red;
+  inset:4px;
+}

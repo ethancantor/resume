@@ -52,17 +52,17 @@ export default function SidebarCard() {
             <div className='flex flex-col gap-2 items-center text-center mt-3'>
                 <div className={TITLE_FONT.className + ' text-white text-lg'}>Skills</div>
                 <IconArrangement>
-                    <AboutMeIcon icon={Icons.NextIcon} name='Next.js' />
-                    <AboutMeIcon icon={Icons.ReactIcon} name='React.js' />
-                    <AboutMeIcon icon={Icons.NodeIcon} name='Node.js' />
-                    <AboutMeIcon icon={Icons.JavaScriptIcon} name='JavaScript' />
-                    <AboutMeIcon icon={Icons.TypeScriptIcon} name='TypeScript' />
-                    <AboutMeIcon icon={Icons.TailwindIcon} name='TailwindCSS' />
-                    <AboutMeIcon icon={Icons.PythonIcon} name='Python' />
-                    <AboutMeIcon icon={Icons.MySQLIcon} name='MySQL' />
-                    <AboutMeIcon icon={Icons.JavaIcon} name='Java' />
-                    <AboutMeIcon icon={Icons.CIcon} name='C' />
-                    <AboutMeIcon icon={Icons.CPlusIcon} name='C++' />
+                    <AboutMeIcon icon={Icons.NextIcon} name='Next.js' size={60}/>
+                    <AboutMeIcon icon={Icons.ReactIcon} name='React.js' size={60}/>
+                    <AboutMeIcon icon={Icons.NodeIcon} name='Node.js' size={60}/>
+                    <AboutMeIcon icon={Icons.JavaScriptIcon} name='JavaScript' size={60}/>
+                    <AboutMeIcon icon={Icons.TypeScriptIcon} name='TypeScript' size={60}/>
+                    <AboutMeIcon icon={Icons.TailwindIcon} name='TailwindCSS' size={60}/>
+                    <AboutMeIcon icon={Icons.PythonIcon} name='Python' size={60}/>
+                    <AboutMeIcon icon={Icons.MySQLIcon} name='MySQL' size={60}/>
+                    <AboutMeIcon icon={Icons.JavaIcon} name='Java' size={60}/>
+                    <AboutMeIcon icon={Icons.CIcon} name='C' size={60}/>
+                    <AboutMeIcon icon={Icons.CPlusIcon} name='C++' size={60}/>
                 </IconArrangement>
             </div>
             
