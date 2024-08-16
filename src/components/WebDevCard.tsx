@@ -51,7 +51,7 @@ export default function WebDevCard({fromRight, imageRight, image, children, link
 
     if(isMobile) {
         return (
-            <motion.div className='max-h-screen flex justify-center overflow-hidden w-[calc(100vw-10px)]' style={{x: boxX }} ref={slideBoxRef} >
+            <motion.div className='max-h-screen flex justify-center overflow-hidden w-[calc(100vw-10px)] border-primary border-2 rounded-xl' style={{x: boxX }} ref={slideBoxRef} >
                 <div className="grid grid-cols-1 items-center bg-raisin-dark border border-raisin-light rounded-lg shadow-2xl">
                     <div className={'rounded-xl h-full col-span-2 overflow-clip ' + (imageRight ? 'order-first' : 'order-last')} >
                         <Link href={link || ''} className={(link ? 'cursor-pointer' : 'pointer-events-none')}>
@@ -65,7 +65,7 @@ export default function WebDevCard({fromRight, imageRight, image, children, link
     }
 
     return (
-        <motion.div className='max-h-screen flex justify-center overflow-hidden' style={{x: boxX }} ref={slideBoxRef}>
+        <motion.div className='max-h-screen flex justify-center overflow-hidden border-primary border-2 rounded-xl' style={{x: boxX }} ref={slideBoxRef}>
             <div className="grid grid-cols-3 items-center bg-raisin-dark border border-raisin-light rounded-lg shadow-2xl h-[55vh]">
                 <div className={'rounded-xl h-full col-span-2 overflow-clip ' + (imageRight ? 'order-first' : 'order-last')} >
                     <Link href={link || ''} className={(link ? 'cursor-pointer' : 'pointer-events-none')}>
