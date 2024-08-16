@@ -1,28 +1,29 @@
 'use client';
-import React, { useEffect, useRef, useState } from 'react'
+import React, { ReactNode, useEffect, useRef, useState } from 'react'
 import { TITLE_FONT } from '@/fonts';
 import { AboutMeIcon } from './AboutMeIcon';
 import * as Icons from '@/pictures/logos/logos.index';
 import { circIn, cubicBezier, motion, useScroll, useTransform } from 'framer-motion';
+import { SkillIcon } from './SkillIcon';
 
 export const SkillsPage = () => {
 
     const [scrollY, setScrollY] = useState(0);
 
-    const skills = 
+    const skills: ReactNode[] = 
         [
-            <AboutMeIcon icon={Icons.NextIcon} name='Next.js' size={100}  />,
-            <AboutMeIcon icon={Icons.ReactIcon} name='React.js' size={100}  />,
-            <AboutMeIcon icon={Icons.NodeIcon} name='Node.js' size={100}  />,
-            <AboutMeIcon icon={Icons.JavaScriptIcon} name='JavaScript' size={100}  />,
-            <AboutMeIcon icon={Icons.TypeScriptIcon} name='TypeScript' size={100}  />,
-            <AboutMeIcon icon={Icons.TailwindIcon} name='TailwindCSS' size={100}  />,
-            <AboutMeIcon icon={Icons.GitHubIcon} name='GitHub' size={100} />,
-            <AboutMeIcon icon={Icons.PythonIcon} name='Python' size={100}   />,
-            <AboutMeIcon icon={Icons.MySQLIcon} name='MySQL' size={100}  />,
-            <AboutMeIcon icon={Icons.JavaIcon} name='Java' size={100}  />,
-            <AboutMeIcon icon={Icons.CIcon} name='C' size={100}  />,
-            <AboutMeIcon icon={Icons.CPlusIcon} name='C++' size={100} />,
+            <AboutMeIcon icon={Icons.NextIcon} name='Next.js' size={100} key='nextIcon'/>,
+            <AboutMeIcon icon={Icons.ReactIcon} name='React.js' size={100} key='reactIcon' />,
+            <AboutMeIcon icon={Icons.NodeIcon} name='Node.js' size={100} key='nodeIcon' />,
+            <AboutMeIcon icon={Icons.JavaScriptIcon} name='JavaScript' size={100} key='JSIcon' />,
+            <AboutMeIcon icon={Icons.TypeScriptIcon} name='TypeScript' size={100} key='TSIcon' />,
+            <AboutMeIcon icon={Icons.TailwindIcon} name='TailwindCSS' size={100} key='TWCSSIcon' />,
+            <AboutMeIcon icon={Icons.GitHubIcon} name='GitHub' size={100} key='GH' />,
+            <AboutMeIcon icon={Icons.PythonIcon} name='Python' size={100} key='PY'  />,
+            <AboutMeIcon icon={Icons.MySQLIcon} name='MySQL' size={100} key='MYSQL' />,
+            <AboutMeIcon icon={Icons.JavaIcon} name='Java' size={100}  key='JAVA'/>,
+            <AboutMeIcon icon={Icons.CIcon} name='C' size={100}  key='C'/>,
+            <AboutMeIcon icon={Icons.CPlusIcon} name='C++' size={100} key='C++'/>,
         ]
 
     const radius = 300;
@@ -34,35 +35,17 @@ export const SkillsPage = () => {
     });
 
     useEffect(() => {
-        console.log('USE EFFECT');
         scroll.scrollYProgress.on('change', (latest) => {
             setScrollY(latest);
         });
     }, [scroll]);
 
-    const calcTranslates = (index: number) => {
-        const angle = (2 * Math.PI) / (skills.length) * (index + (placeOffset * scrollY));
-        const transX = Math.round(Math.sin(angle) * radius);
-        const transY = Math.round(Math.cos(angle) * radius);
-        return [transX, transY];
-    }
+
     
     return (
         <div className='h-screen flex gap-1 items-center justify-center' ref={divRef}>
             {skills && skills.map((skill, index) => {
-                const [transX, transY] = calcTranslates(index);
-                const transXanim = useTransform(scroll.scrollYProgress, [0, 1], [0, transX], {});
-                const transYanim = useTransform(scroll.scrollYProgress, [0, 1], [0, transY], {});
-                const sizeAnim = useTransform(scroll.scrollYProgress, [0, 1], [0, 1])
-
-                return (
-                    <motion.div className='absolute' key={index}
-                        // initial={'start'} 
-                        // variants={variants}
-                        // whileInView={'end'}
-                        style={{x: transXanim, y: transYanim, scale: sizeAnim}}
-                    >{skill}</motion.div>
-                )
+                return <SkillIcon skill={skill} index={index} numSkills={skills.length} radius={radius} placeOffset={placeOffset} scrollYProgress={scroll.scrollYProgress} scrollY={scrollY} key={index}/>
             })}
             <div className='flex justify-center items-center w-fit h-fit drop-shadow-md'>
                 <svg className='w-72 h-72 fill-primary overflow-visible' viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="none">
