@@ -8,9 +8,10 @@ interface Props {
     title: string;
     bullets: string[];
     icons?: ({icon: string | StaticImageData, name: string})[];
+    iconsLeft?: boolean
 }
 
-export const CardContent = ({title, bullets, icons}: Props) => {
+export const CardContent = ({title, bullets, icons, iconsLeft}: Props) => {
 
     const cascadeList = (listNum: number) => {
         return {
@@ -43,7 +44,7 @@ export const CardContent = ({title, bullets, icons}: Props) => {
                         )
                     })}
                 </ul>
-                <div className='flex flex-row flex-shrink-0 items-center justify-center'>
+                <div className={`flex flex-row flex-shrink-0 ${iconsLeft ? 'justify-left items-start' : 'justify-center items-center'}`}>
                     { icons && icons.map((icon, index) => {
                         return (
                             <HexIcon icon={icon.icon} key={index} name={icon.name} />
