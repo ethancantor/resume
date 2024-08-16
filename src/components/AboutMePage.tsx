@@ -2,7 +2,6 @@ import React from 'react'
 import { TITLE_FONT } from '@/fonts'
 import Image from 'next/image'
 import Avatar from '@/pictures/ethanface.png';
-import { HexIcon } from './HexIcon';
 
 import '../app/globals.css';
 
@@ -11,7 +10,7 @@ export const AboutMePage = () => {
     return (
         <div className='h-screen w-screen flex flex-row space-x-5 justify-center items-center p-32'>
             <div className='hex'> 
-                <Image className="w-52 h-52 mb-3 rounded-full shadow-lg border-4 border-primary" src={Avatar} alt="Ethan image" width='64' height='64' unoptimized/>        
+                <Image className="w-52 h-52 mb-3 rounded-full drop-shadow-md border-4 border-primary" src={Avatar} alt="Ethan image" width='64' height='64' unoptimized/>        
             </div>
            <div>
                 <div className={'text-6xl ' + TITLE_FONT.className}>Ethan Cantor</div>

@@ -4,6 +4,7 @@ import { AboutMePage } from "@/components/AboutMePage";
 import { ProjectsPage } from "@/components/ProjectsPage";
 import SecondBackground from "@/components/SecondBackground";
 import { SkillsPage } from "@/components/SkillsPage";
+import { ExperiencePage } from "@/components/ExperiencePage";
 // import { useColorCalc } from "@/hooks/colorCalc";
 
 
@@ -15,6 +16,7 @@ const Home = () => {
 			<SkillsPage />
             {/* <div className='bg-gray-300 h-10 w-[200%] bottom-0'/> */}
 			<ProjectsPage />
+			<ExperiencePage />
 		</div>
 	);
 };

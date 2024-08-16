@@ -14,10 +14,8 @@ import NextAuthIcon from '@/pictures/logos/next-auth.svg';
 export const ProjectsPage = () => {
 
     return (
-        <div className='h-screen w-screen flex flex-col justify-center items-center relative'>
-            <div className='w-screen flex flex-col justify-center items-center p-32 space-y-10 absolute top-0'>
+            <div className='h-fit w-screen flex flex-col justify-center items-center p-32 space-y-10 top-0'>
                 <div className={'text-6xl ' + TITLE_FONT.className}>Projects</div>
-                
                 <WebDevCard image={EternalSS} fromRight link="https://eternalesports.club">
                     <CardContent title="Eternal Esports Club"
                         bullets={[
@@ -41,7 +39,7 @@ export const ProjectsPage = () => {
                     />
                 </WebDevCard>
             </div>
-        </div>
+        // </div>
     )
 }
 

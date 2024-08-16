@@ -20,7 +20,7 @@ export default function WebDevCard({fromRight, imageRight, image, children, link
     if(!imageRight) imageRight = false;
 
     const width = useWidth();
-    const [boxX, setBoxX] = useState(fromRight ? width : -width);
+    const [boxX, setBoxX] = useState(fromRight ? width * 2 : -(width * 2));
     const slideBoxRef = useRef(null);
 
     const { scrollYProgress } = useScroll({

@@ -29,15 +29,27 @@ export default function SecondBackground() {
     const isMobile = useWidth() < 500;
 
     return (
-        <div className='fixed -z-20 h-[100vh] min-w-[100vw] top-0'>
-            <svg className='flex-no-shrink fill-current' fill='none' viewBox= {isMobile ? "0 0 335 900" : "0 100 900 500"} id="visual" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" version="1.1">
-                <rect x="0" y="0" width={isMobile?"1080":"1920"} height={isMobile?"1920":"1080"} fill="#2f3138" />
-                <animated.path d={animationProps.pathMount1} fill="#2e3459" />
-                <animated.path d={animationProps.pathMount2} fill="#3d4080" />
-                <animated.path d={animationProps.pathMount3} fill="#544aa6" />
-                <animated.path d={animationProps.pathMount4} fill="#7451cb" />
-                <animated.path d={animationProps.pathMount5} fill="#9b53ed" />
-            </svg>
-        </div>
+        // <div className='fixed -z-20 h-[100vh] min-w-[100vw] top-0'>
+            // <div style={{zIndex: -999, top: 0, position: 'fixed', left: 0, height: '100%', width: '100%'}}>
+            <>
+                <div className='fixed h-screen w-screen top-0 -z-10'>                
+                    <svg fill='none' viewBox= {isMobile ? "0 0 335 900" : "0 100 900 500"} id="visual" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" version="1.1">
+                        <rect x="0" y="0" width={isMobile?"1080":"1920"} height={isMobile?"1920":"1080"} fill="#2f3138" />
+                        <animated.path d={animationProps.pathMount1} fill="#2e3459" />
+                        <animated.path d={animationProps.pathMount2} fill="#3d4080" />
+                        <animated.path d={animationProps.pathMount3} fill="#544aa6" />
+                    </svg>
+                </div>
+
+                <div className='fixed h-screen w-screen bottom-0 z-10 pointer-events-none'>
+                    <svg viewBox= {isMobile ? "0 0 335 900" : "0 100 900 500"} id="visual" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" version="1.1">
+                        <animated.path d={animationProps.pathMount4} fill="#7451cb" />
+                        <animated.path d={animationProps.pathMount5} fill="#9b53ed" />
+                    </svg>
+                </div>
+            </>
+
+
+        // </div>
     )
 }

@@ -12,6 +12,10 @@ import ReactIcon from '@/pictures/logos/react-2.svg';
 import TailwindIcon from '@/pictures/logos/tailwindcss.svg';
 import TypeScriptIcon from '@/pictures/logos/typescript.svg';
 
+import MSALogo from '@/pictures/logos/MSA_Safety_Logo.svg';
+
 export { CIcon, CPlusIcon, GitHubIcon, JavaIcon, JavaScriptIcon, MySQLIcon, NextAuthIcon, NextIcon, NodeIcon, PythonIcon, 
     ReactIcon, TailwindIcon, TypeScriptIcon, 
+
+    MSALogo,
 }
