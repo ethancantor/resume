@@ -7,7 +7,7 @@ interface Props {
     icon: string | StaticImageData;
     name: string;
     className?: string;
-    size: number
+    size?: number
 }
 
 export const AboutMeIcon = ({icon, name, className, size}: Props) => {
