@@ -14,7 +14,6 @@ const Home = () => {
             <SecondBackground />
 			<AboutMePage />
 			<SkillsPage />
-            {/* <div className='bg-gray-300 h-10 w-[200%] bottom-0'/> */}
 			<ProjectsPage />
 			<ExperiencePage />
 		</div>

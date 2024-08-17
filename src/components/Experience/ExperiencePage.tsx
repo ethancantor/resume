@@ -3,6 +3,7 @@ import { TITLE_FONT } from '@/fonts'
 import { ExperienceCard } from './ExperienceCard';
 import { CardContent } from '../Misc/CardContent';
 import * as Icons from '@/pictures/logos/logos.index'
+import Link from 'next/link';
 
 
 export const ExperiencePage = () => {
@@ -32,7 +33,15 @@ export const ExperiencePage = () => {
                     bullets={[
                         'Designed and developed an online intervention platform for Project Achieve’s HIV research program',
                         'Created an interactive and informative website to allow diverse populations to participate in and gain information about HIV testing',
-
+                        <div key='recognitions' className='flex flex-col'>
+                            Recognition of Work: 
+                            <Link href='/files/Frye_AAM_JAIDS_2020.pdf' key='FRYE' className='text-blue-400 underline'>
+                                2020 All About Me Research Paper: Victoria Frye
+                            </Link>
+                            <Link href='/files/Koblin_AAM_JMIR_2017.pdf' key='KOBLIN' className='text-blue-400 underline'>
+                                2017 All About Me Research Paper: Beryl Koblin
+                            </Link>
+                        </div>,
                     ]}
                     icons={[
                         { icon: Icons.HTMLIcon, name: 'HTML' }, 

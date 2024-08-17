@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { ReactNode } from 'react'
 import { motion } from 'framer-motion'
 import { TITLE_FONT } from '@/fonts'
 import { StaticImageData } from 'next/image';
@@ -6,7 +6,7 @@ import { HexIcon } from '../Misc/HexIcon';
 
 interface Props {
     title: string;
-    bullets: string[];
+    bullets: (string | ReactNode )[];
     icons?: ({icon: string | StaticImageData, name: string})[];
     iconsLeft?: boolean
 }
@@ -39,7 +39,7 @@ export const CardContent = ({title, bullets, icons, iconsLeft}: Props) => {
                                 initial={'hidden'}
                                 whileInView={'show'}
                             >
-                                <div className='hover:text-gray-300'>{bullet}</div>
+                                <div className={`hover:text-gray-300 ${iconsLeft ? 'text-left' : 'text-center'}`}>{bullet}</div>
                             </motion.li>
                         )
                     })}

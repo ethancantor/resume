@@ -19,7 +19,7 @@ export default async function RootLayout({
 
   return (
     <html lang="en">
-      <body className={BODY_FONT.className + ' flex flex-row'}>
+      <body className={BODY_FONT.className + ' flex flex-row text-white bg-raisin-light'}>
         {isMobile
         ? 
           <>

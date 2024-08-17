@@ -40,10 +40,8 @@ export const SkillsPage = () => {
         });
     }, [scroll]);
 
-
-    
     return (
-        <div className='h-screen flex gap-1 items-center justify-center' ref={divRef}>
+        <div className='h-screen flex gap-1 items-center justify-center w-fit' ref={divRef}>
             {skills && skills.map((skill, index) => {
                 return <SkillIcon skill={skill} index={index} numSkills={skills.length} radius={radius} placeOffset={placeOffset} scrollYProgress={scroll.scrollYProgress} scrollY={scrollY} key={index}/>
             })}
