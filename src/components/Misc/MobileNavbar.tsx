@@ -1,16 +1,14 @@
 'use client';
 import Image from 'next/image';
 import React, { useState } from 'react'
-import Hamburger from '@/pictures/icons/burger-menu-svgrepo-com.svg';
 import Link from 'next/link';
 import Avatar from '@/pictures/ethanface.png';
 import { TITLE_FONT } from '@/fonts';
 import {motion} from 'framer-motion';
 import { useWidth } from '@/hooks/use-width';
 import { HambugerButton } from './HambugerButton';
-import { Icon } from './Icon';
 import * as Icons from '@/pictures/logos/logos.index';
-import { AboutMeIcon } from './AboutMeIcon';
+import { AboutMeIcon } from '../AboutMe/AboutMeIcon';
 import { IconArrangement } from './IconArrangement';
 
 export const MobileNavbar = () => {

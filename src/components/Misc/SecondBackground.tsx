@@ -1,6 +1,6 @@
 'use client';
 import { useEffect, useState } from 'react';
-import { pathMount1, pathMount2, pathMount3, pathMount4, pathMount5 } from './paths/paths';
+import { pathMount1, pathMount2, pathMount3, pathMount4, pathMount5 } from '../Paths/paths';
 import { animated, useSpring } from 'react-spring';
 import { useWidth } from '@/hooks/use-width';
 

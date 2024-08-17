@@ -1,7 +1,6 @@
 import { StaticImageData } from 'next/image';
 import React from 'react'
-import { Icon } from './Icon';
-import { HexIcon } from './HexIcon';
+import { HexIcon } from '../Misc/HexIcon';
 
 interface Props {
     icon: string | StaticImageData;

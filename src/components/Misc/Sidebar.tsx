@@ -4,7 +4,7 @@ import Image from 'next/image'
 import Avatar from '@/pictures/ethanface.png';
 import Link from 'next/link';
 import { TITLE_FONT } from '@/fonts';
-import { AboutMeIcon } from './AboutMeIcon';
+import { AboutMeIcon } from '../AboutMe/AboutMeIcon';
 import * as Icons from '@/pictures/logos/logos.index';
 import { IconArrangement } from './IconArrangement';
 

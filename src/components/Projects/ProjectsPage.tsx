@@ -1,7 +1,7 @@
 import React from 'react'
 import { TITLE_FONT } from '@/fonts'
-import WebDevCard from './WebDevCard'
-import { CardContent } from './CardContent'
+import { WebDevCard } from './WebDevCard';
+import { CardContent } from '../Misc/CardContent';
 import EternalSS from '@/pictures/sites/eternalSS.png';
 import EthanSS from '@/pictures/sites/ethanhenSS.png';
 import NextIcon from '@/pictures/logos/next-js.svg';

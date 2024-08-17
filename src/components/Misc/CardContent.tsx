@@ -2,7 +2,7 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import { TITLE_FONT } from '@/fonts'
 import { StaticImageData } from 'next/image';
-import { HexIcon } from './HexIcon';
+import { HexIcon } from '../Misc/HexIcon';
 
 interface Props {
     title: string;

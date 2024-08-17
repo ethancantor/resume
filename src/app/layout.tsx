@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import SidebarCard from "@/components/Sidebar";
 import { BODY_FONT } from "@/fonts";
 import { isMobileDevice } from "@/utils/isMobile";
-import { MobileNavbar } from "@/components/MobileNavbar";
+import { MobileNavbar } from "@/components/Misc/MobileNavbar";
 
 export const metadata: Metadata = {
   title: "Resume Ethan Cantor",

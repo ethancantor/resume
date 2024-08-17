@@ -3,15 +3,16 @@ import { TITLE_FONT } from '@/fonts'
 import Image from 'next/image'
 import Avatar from '@/pictures/ethanface.png';
 
-import '../app/globals.css';
+import '../../app/globals.css';
+import Link from 'next/link';
 
 export const AboutMePage = () => {
 
     return (
         <div className='h-screen w-screen flex flex-row space-x-5 justify-center items-center p-32'>
-            <div className='hex'> 
+            <Link href='/music'>
                 <Image className="w-52 h-52 mb-3 rounded-full drop-shadow-md border-4 border-primary" src={Avatar} alt="Ethan image" width='64' height='64' unoptimized/>        
-            </div>
+            </Link>
            <div>
                 <div className={'text-6xl ' + TITLE_FONT.className}>Ethan Cantor</div>
                 <div className='text-xl'>A full stack engineer out of Philadelphia, PA</div>

@@ -14,7 +14,7 @@ interface Props {
     link?: string;
 }
 
-export default function WebDevCard({fromRight, imageRight, image, children, link}: Props) {
+export function WebDevCard({fromRight, imageRight, image, children, link}: Props) {
 
     if(!fromRight) fromRight = false;
     if(!imageRight) imageRight = false;

@@ -1,7 +1,7 @@
 'use client';
 import React, { ReactNode, useEffect, useRef, useState } from 'react'
 import { TITLE_FONT } from '@/fonts';
-import { AboutMeIcon } from './AboutMeIcon';
+import { AboutMeIcon } from '../AboutMe/AboutMeIcon';
 import * as Icons from '@/pictures/logos/logos.index';
 import { circIn, cubicBezier, motion, useScroll, useTransform } from 'framer-motion';
 import { SkillIcon } from './SkillIcon';

@@ -1,7 +1,7 @@
 import React from 'react'
 import { TITLE_FONT } from '@/fonts'
 import { ExperienceCard } from './ExperienceCard';
-import { CardContent } from './CardContent';
+import { CardContent } from '../Misc/CardContent';
 import * as Icons from '@/pictures/logos/logos.index'
 
 

@@ -1,4 +1,4 @@
-import AlbumHover from '@/components/AlbumHover';
+import AlbumHover from '@/components/Music/AlbumHover';
 import React from 'react';
 import Balance from '@/pictures/albums/balanceart.jpg';
 import Clouds from '@/pictures/albums/cloudsart.jpg';
@@ -6,8 +6,8 @@ import DTFB from '@/pictures/albums/decidingtofeelbetterart.jpg';
 import Dystopia from '@/pictures/albums/dystopiaart.jpg';
 import IL from '@/pictures/albums/imaginarylabyrinthart.jpg';
 import MH from '@/pictures/albums/movinghomeart.jpg';
-import MusicBackground from '@/components/MusicBackground';
-import YoutubeHover from '@/components/YoutubeHover';
+import MusicBackground from '@/components/Music/MusicBackground';
+import YoutubeHover from '@/components/Music/YoutubeHover';
 import { TITLE_FONT } from '@/fonts';
 
 
