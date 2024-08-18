@@ -3,9 +3,9 @@ import React, { ReactNode, useEffect, useRef, useState } from 'react'
 import { TITLE_FONT } from '@/fonts';
 import { AboutMeIcon } from '../AboutMe/AboutMeIcon';
 import * as Icons from '@/pictures/logos/logos.index';
-import { circIn, cubicBezier, motion, useScroll, useTransform } from 'framer-motion';
+import { useScroll } from 'framer-motion';
 import { SkillIcon } from './SkillIcon';
-import { BottomArrow } from '../Misc/BottomArrow';
+import { useWidth } from '@/hooks/use-width';
 
 export const SkillsPage = () => {
 
@@ -27,7 +27,9 @@ export const SkillsPage = () => {
             <AboutMeIcon icon={Icons.CPlusIcon} name='C++' size={100} key='C++'/>,
         ]
 
-    const radius = 300;
+    const width = useWidth();
+
+    const radius = width < 500 ? width / 2 - 50 : 300;
     const placeOffset = 6;
     
     const divRef = useRef(null);
@@ -42,15 +44,15 @@ export const SkillsPage = () => {
     }, [scroll]);
 
     return (
-        <div className='h-screen flex flex-col gap-1 items-center justify-center w-fit' ref={divRef}>
+        <div className='h-screen w-screen flex flex-col gap-1 items-center justify-center' ref={divRef}>
             {skills && skills.map((skill, index) => {
                 return <SkillIcon skill={skill} index={index} numSkills={skills.length} radius={radius} placeOffset={placeOffset} scrollYProgress={scroll.scrollYProgress} scrollY={scrollY} key={index}/>
             })}
-            <div className='flex justify-center items-center w-fit h-fit drop-shadow-md'>
-                <svg className='w-72 h-72 fill-primary overflow-visible' viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="none">
+            <div className='flex justify-center items-center w-fit h-fit drop-shadow-md max-h-[50%] max-w-[50%]'>
+                <svg className={`${width < 500 ? 'w-[100%] h-[100%]' : 'w-72 h-72'} fill-primary overflow-visible`} viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="none">
                     <path stroke='#212227' strokeWidth='2%' d="M9.166.33a2.25 2.25 0 00-2.332 0l-5.25 3.182A2.25 2.25 0 00.5 5.436v5.128a2.25 2.25 0 001.084 1.924l5.25 3.182a2.25 2.25 0 002.332 0l5.25-3.182a2.25 2.25 0 001.084-1.924V5.436a2.25 2.25 0 00-1.084-1.924L9.166.33z" />
                 </svg>
-                <div className={`text-6xl absolute ${TITLE_FONT.className}`}>Skills</div>
+                <div className={`${width < 500 ? 'text-5xl' : 'text-6xl'} absolute ${TITLE_FONT.className}`}>Skills</div>
             </div>
         </div>
     )

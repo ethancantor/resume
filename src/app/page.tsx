@@ -10,7 +10,7 @@ import { ExperiencePage } from "@/components/Experience/ExperiencePage";
 const Home = () => {
 	return (
         <div className='flex items-center justify-center flex-col'>
-            <SecondBackground />
+			<SecondBackground />
 			<AboutMePage />
 			<SkillsPage />
 			<ProjectsPage />
