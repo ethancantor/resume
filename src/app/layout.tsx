@@ -18,7 +18,7 @@ export default async function RootLayout({
 
   return (
     <html lang="en">
-      <body className={BODY_FONT.className + 'flex flex-col text-white bg-gradient-to-r from-raisin-light to-raisin-light'}>
+      <body className={BODY_FONT.className + 'flex flex-col text-white bg-raisin-light bg-gradient-to-t'}>
         <div className="overflow-x-clip flex-grow">
           {children}
         </div>
