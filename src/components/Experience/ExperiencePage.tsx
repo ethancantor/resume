@@ -9,7 +9,7 @@ import Link from 'next/link';
 export const ExperiencePage = () => {
 
     return ( 
-        <div className='h-fit w-screen flex flex-col justify-center items-center p-32 space-y-10 top-0 border-primary'>
+        <div className='h-fit w-screen flex flex-col justify-center items-center space-y-10 top-0 border-primary mb-40'>
             <div className={'text-6xl ' + TITLE_FONT.className}>Experience</div>
             <ExperienceCard image={Icons.MSALogo}>
                 <CardContent 

@@ -20,7 +20,7 @@ export const ExperienceCard = ({image, link, children}: Props) => {
     });
 
     return (
-        <motion.div className='max-h-screen flex justify-center overflow-hidden w-[calc(100vw-10px) rounded-lg ' ref={boxRef} 
+        <motion.div className='max-h-screen flex justify-center overflow-hidden  rounded-lg ' ref={boxRef} 
             style={{scale: scrollYProgress }} >
             <div className="flex flex-col items-center bg-raisin-dark border-primary border-2  rounded-lg shadow-2xl text-center w-[90%]">
                 <div className={'h-full col-span-2 overflow-clip p-2'} >
