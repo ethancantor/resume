@@ -5,7 +5,6 @@ import { ProjectsPage } from "@/components/Projects/ProjectsPage";
 import SecondBackground from "@/components/Misc/SecondBackground";
 import { SkillsPage } from "@/components/Skills/SkillsPage";
 import { ExperiencePage } from "@/components/Experience/ExperiencePage";
-// import { useColorCalc } from "@/hooks/colorCalc";
 
 
 const Home = () => {

@@ -5,6 +5,7 @@ import { AboutMeIcon } from '../AboutMe/AboutMeIcon';
 import * as Icons from '@/pictures/logos/logos.index';
 import { circIn, cubicBezier, motion, useScroll, useTransform } from 'framer-motion';
 import { SkillIcon } from './SkillIcon';
+import { BottomArrow } from '../Misc/BottomArrow';
 
 export const SkillsPage = () => {
 
@@ -41,7 +42,7 @@ export const SkillsPage = () => {
     }, [scroll]);
 
     return (
-        <div className='h-screen flex gap-1 items-center justify-center w-fit' ref={divRef}>
+        <div className='h-screen flex flex-col gap-1 items-center justify-center w-fit' ref={divRef}>
             {skills && skills.map((skill, index) => {
                 return <SkillIcon skill={skill} index={index} numSkills={skills.length} radius={radius} placeOffset={placeOffset} scrollYProgress={scroll.scrollYProgress} scrollY={scrollY} key={index}/>
             })}
@@ -51,7 +52,6 @@ export const SkillsPage = () => {
                 </svg>
                 <div className={`text-6xl absolute ${TITLE_FONT.className}`}>Skills</div>
             </div>
-            
         </div>
     )
 };

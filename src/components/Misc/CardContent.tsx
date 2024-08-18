@@ -34,7 +34,7 @@ export const CardContent = ({title, bullets, icons, iconsLeft}: Props) => {
                     {bullets && bullets.map((bullet, index) => {
                         return (
                             <motion.li
-                                key={bullet + index}
+                                key={index}
                                 variants={cascadeList(index)}
                                 initial={'hidden'}
                                 whileInView={'show'}

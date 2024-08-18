@@ -10,6 +10,7 @@ import NodeIcon from '@/pictures/logos/nodejs-icon.svg';
 import PythonIcon from '@/pictures/logos/python-5.svg';
 import ReactIcon from '@/pictures/logos/react-2.svg';
 import NextAuthIcon from '@/pictures/logos/next-auth.svg';
+import { BottomArrow } from '../Misc/BottomArrow';
 
 export const ProjectsPage = () => {
 
