@@ -5,6 +5,7 @@ import { ProjectsPage } from "@/components/Projects/ProjectsPage";
 import SecondBackground from "@/components/Misc/SecondBackground";
 import { SkillsPage } from "@/components/Skills/SkillsPage";
 import { ExperiencePage } from "@/components/Experience/ExperiencePage";
+import { PublishedMusicPage } from "@/components/Music/PublishedMusicPage";
 
 
 const Home = () => {
@@ -15,6 +16,7 @@ const Home = () => {
 			<SkillsPage />
 			<ProjectsPage />
 			<ExperiencePage />
+			<PublishedMusicPage />
 		</div>
 	);
 };

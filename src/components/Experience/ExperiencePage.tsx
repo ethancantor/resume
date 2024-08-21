@@ -9,15 +9,18 @@ import Link from 'next/link';
 export const ExperiencePage = () => {
 
     return ( 
-        <div className='h-fit w-screen flex flex-col justify-center items-center space-y-10 top-0 border-primary mb-40'>
+        <div className='h-fit w-screen flex flex-col justify-center items-center space-y-10 top-0 border-primary mb-40' id='experience-section'>
             <div className={'text-6xl ' + TITLE_FONT.className}>Experience</div>
             <ExperienceCard image={Icons.MSALogo}>
                 <CardContent 
                     iconsLeft
                     title='Software Engineer Co-op'
                     bullets={[
-                        'Created safety equipment in the Fixed Gas Detection Department for gauging dangerous gas levels',
-                        'Updated old C libraries to work with new and improved chips'
+                        'Worked on the Fixed Gas Detection Department team to create safety equipment for gauging dangerous gas levels',
+                        'Updated C libraries to work with new and improved chips',
+                        <Link href='/files/MSA_Slides.pdf' key='MSA' className='text-blue-400 underline'>
+                            MSA Co-op Final Presentation
+                        </Link>
                     ]}
                     icons={[
                         { icon: Icons.CIcon, name: 'C' }, 

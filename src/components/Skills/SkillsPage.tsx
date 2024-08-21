@@ -44,7 +44,7 @@ export const SkillsPage = () => {
     }, [scroll]);
 
     return (
-        <div className='h-screen w-screen flex flex-col gap-1 items-center justify-center' ref={divRef}>
+        <div className='h-screen w-screen flex flex-col gap-1 items-center justify-center' ref={divRef} id='skills-section'>
             {skills && skills.map((skill, index) => {
                 return <SkillIcon skill={skill} index={index} numSkills={skills.length} radius={radius} placeOffset={placeOffset} scrollYProgress={scroll.scrollYProgress} scrollY={scrollY} key={index}/>
             })}

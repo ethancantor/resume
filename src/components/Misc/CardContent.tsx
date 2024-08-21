@@ -39,7 +39,7 @@ export const CardContent = ({title, bullets, icons, iconsLeft}: Props) => {
                                 initial={'hidden'}
                                 whileInView={'show'}
                             >
-                                <div className={`hover:text-gray-300 ${iconsLeft ? 'text-left' : 'text-center'}`}>{bullet}</div>
+                                <div className={`hover:text-gray-300 text-left`}>{bullet}</div>
                             </motion.li>
                         )
                     })}
