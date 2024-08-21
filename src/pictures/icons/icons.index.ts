@@ -8,4 +8,6 @@ import ProjectsIcon from '@/pictures/icons/gears-menu-svgrepo-com.svg';
 import ExperienceIcon from '@/pictures/icons/award-svgrepo-com.svg';
 import MusicIcon from '@/pictures/icons/music-icon.svg';
 
-export { BurgerIcon, ChevronIcon, EmailIcon, MusicIcon, ResumeIcon, SkillsIcon, ProjectsIcon, ExperienceIcon };
+import BackToTopIcon from '@/pictures/icons/up-arrow-svgrepo-com.svg';
+
+export { BurgerIcon, ChevronIcon, EmailIcon, MusicIcon, ResumeIcon, SkillsIcon, ProjectsIcon, ExperienceIcon, BackToTopIcon };

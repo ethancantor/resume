@@ -1,3 +1,4 @@
+import { useMotionValue, useScroll } from "framer-motion";
 
 export const useScrollTo = () => {
     const scrollToSection = (sectionID: string) => {

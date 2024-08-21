@@ -14,11 +14,6 @@ export const ContactButton = () => {
                     Get in Touch
                 </div>
             </Link>
-            <div
-                onClick={() => scrollToSection('about-me-section')}
-                className={`max-w-fit max-h-fit rounded-lg bg-gradient-to-r from-primary to-blue-400 to-90% text-white text-4xl p-4 drop-shadow-lg font-bold cursor-pointer mb-56 mt-5 ${TITLE_FONT.className}`}>
-                Back to Top
-            </div>
         </div>
     )
 };
