@@ -1,7 +1,5 @@
 import React from 'react'
 import { TITLE_FONT } from '@/fonts'
-import Image from 'next/image'
-import Avatar from '@/pictures/ethanface.png';
 import '../../app/globals.css';
 import Link from 'next/link';
 import { HexIcon } from '../Misc/HexIcon';
@@ -19,11 +17,8 @@ export const AboutMePage = () => {
     return (
         <div className='h-screen w-screen flex flex-col flex-shrink-0 flex-wrap space-x-5 justify-center items-center' id='about-me-section'>
             <div className='flex flex-row flex-shrink-0 flex-wrap space-x-5 justify-center items-center'>
-                <div className='bg-primary hexagon-bg'>
-                    <Image className="m-auto rounded-full drop-shadow-md max-h-56 max-w-56 hexagon absolute" src={Avatar} alt="Ethan image" unoptimized/>      
-                </div>
+                <HexAvatar />
                 <div className='max-w-[75%] mx-auto'>
-                    <HexAvatar />
                     <div className={`text-6xl ${TITLE_FONT.className}`}>Ethan Cantor</div>
                     <div className='text-xl'>A full stack engineer out of Philadelphia, PA</div>
                     <div className='flex flex-row flex-wrap'>
