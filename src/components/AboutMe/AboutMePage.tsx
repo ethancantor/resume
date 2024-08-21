@@ -5,14 +5,11 @@ import Link from 'next/link';
 import { HexIcon } from '../Misc/HexIcon';
 import { HexAvatar } from './HexAvatar';
 import { EmailIcon, ExperienceIcon, MusicIcon, ProjectsIcon, ResumeIcon, SkillsIcon } from '@/pictures/icons/icons.index';
+import { useScrollTo } from '@/hooks/use-scroll';
 
 export const AboutMePage = () => {
 
-    const scrollToSection = (sectionID: string) => {
-        const element = document.getElementById(sectionID);
-        element?.scrollIntoView({ behavior: 'smooth', inline: 'nearest' });
-    }
-
+    const scrollToSection = useScrollTo();
 
     return (
         <div className='h-screen w-screen flex flex-col flex-shrink-0 flex-wrap space-x-5 justify-center items-center' id='about-me-section'>

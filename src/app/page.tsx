@@ -6,6 +6,7 @@ import SecondBackground from "@/components/Misc/SecondBackground";
 import { SkillsPage } from "@/components/Skills/SkillsPage";
 import { ExperiencePage } from "@/components/Experience/ExperiencePage";
 import { PublishedMusicPage } from "@/components/Music/PublishedMusicPage";
+import { ContactButton } from "@/components/Misc/ContactButton";
 
 
 const Home = () => {
@@ -17,6 +18,7 @@ const Home = () => {
 			<ProjectsPage />
 			<ExperiencePage />
 			<PublishedMusicPage />
+			<ContactButton />
 		</div>
 	);
 };
