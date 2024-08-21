@@ -15,8 +15,9 @@ export const ProjectsPage = () => {
             <WebDevCard image={EternalSS} fromRight link="https://eternalesports.club">
                 <CardContent title="Eternal Esports Club"
                     bullets={[
+                        'Co-Owner and CTO of Eternal Esports Club LLC',
                         'Developed full stack system for the top-ranked Apex Legends Esports Club',
-                        'Created a robust platform that reaches thousands of players and exponentially increased profits',
+                        'Created a robust platform that reaches thousands of players and greatly increased profits',
                         'Used Python, MySQL, and Next.js/Express.js to analyze, store, and display player and match information',
                         'Developed custom REST API to allow community developers access to data'
                     ]}

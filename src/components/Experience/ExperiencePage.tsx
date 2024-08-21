@@ -42,7 +42,7 @@ export const ExperiencePage = () => {
                                 2020 All About Me Research Paper: Victoria Frye
                             </Link>
                             <Link href='/files/Koblin_AAM_JMIR_2017.pdf' key='KOBLIN' className='text-blue-400 underline'>
-                                2017 All About Me Research Paper: Beryl Koblin
+                                2017 All About Me Research Paper: Beryl Koblin (Screenshots of the Platform)
                             </Link>
                         </div>,
                     ]}
