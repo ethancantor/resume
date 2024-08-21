@@ -6,14 +6,15 @@ import '../../app/globals.css';
 import Link from 'next/link';
 import { HexIcon } from '../Misc/HexIcon';
 import { EmailIcon, MusicIcon, ResumeIcon } from '@/pictures/icons/icons.index';
+import { HexAvatar } from './HexAvatar';
 
 export const AboutMePage = () => {
 
     return (
         <div className='h-screen w-screen flex flex-col flex-shrink-0 flex-wrap space-x-5 justify-center items-center'>
             <div className='flex flex-row flex-shrink-0 flex-wrap space-x-5 justify-center items-center'>
-                <Image className="relative m-auto mt-2 rounded-full border-4 border-primary drop-shadow-md max-h-56 max-w-56" src={Avatar} alt="Ethan image" unoptimized/>        
                 <div className='max-w-[75%] mx-auto'>
+                    <HexAvatar />
                     <div className={`text-6xl ${TITLE_FONT.className}`}>Ethan Cantor</div>
                     <div className='text-xl'>A full stack engineer out of Philadelphia, PA</div>
                     <div className='flex flex-row flex-wrap space-x-5 mt-1'>
