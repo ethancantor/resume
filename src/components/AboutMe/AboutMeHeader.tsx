@@ -27,7 +27,7 @@ export const AboutMeHeader = () => {
             <div className={`flex flex-row flex-wrap h-fit`} ref={ref}>
                 <HexIcon icon={SkillsIcon} name='Skills' onClick={() => scrollToSection('skills-section')}/>
                 <HexIcon icon={ProjectsIcon} name='Projects' onClick={() => scrollToSection('projects-section')}/>
-                <HexIcon icon={ExperienceIcon} name='Experince' onClick={() => scrollToSection('experience-section')}/>
+                <HexIcon icon={ExperienceIcon} name='Experience' onClick={() => scrollToSection('experience-section')}/>
                 <HexIcon icon={MusicIcon} name='Music' onClick={() => scrollToSection('music-section')}/>
                 <Link href={'mailto:ethan.cantor99@gmail.com'}>
                     <HexIcon icon={EmailIcon} name='Email Me'/>
@@ -42,7 +42,7 @@ export const AboutMeHeader = () => {
                 <HeaderHexIcon icon={BackToTopIcon} name='Top' onClick={() => scrollToSection('about-me-section')} isMobile={width < 500}/>
                 <HeaderHexIcon icon={SkillsIcon} name='Skills' onClick={() => scrollToSection('skills-section')} isMobile={width < 500}/>
                 <HeaderHexIcon icon={ProjectsIcon} name='Projects' onClick={() => scrollToSection('projects-section')}  isMobile={width < 500}/>
-                <HeaderHexIcon icon={ExperienceIcon} name='Experince' onClick={() => scrollToSection('experience-section')} isMobile={width < 500}/>
+                <HeaderHexIcon icon={ExperienceIcon} name='Experience' onClick={() => scrollToSection('experience-section')} isMobile={width < 500}/>
                 <HeaderHexIcon icon={MusicIcon} name='Music' onClick={() => scrollToSection('music-section')} isMobile={width < 500}/>
                 <Link href={'mailto:ethan.cantor99@gmail.com'}>
                     <HeaderHexIcon icon={EmailIcon} name='Email Me' isMobile={width < 500}/>
