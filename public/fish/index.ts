@@ -1,8 +1,17 @@
+import { StaticImageData } from 'next/image';
 import AlligatorGar from './alligator-gar.png' 
 import Amberjack from './amberjack.png';
 import Arapaima from './arapaima.png';
 import ArcticChar from './arctic-char.png';
 import Asp from './asp.png';
+
+export type fishType = {
+    image: string | StaticImageData,
+    latinName: string,
+    size: string,
+    location: string,
+    eat: string
+}
 
 const fishMap = new Map([
     ['Alligator Gar', 
