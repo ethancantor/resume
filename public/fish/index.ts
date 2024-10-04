@@ -13,7 +13,7 @@ export type fishType = {
     eat: string
 }
 
-const fishMap = new Map([
+const fishMap = new Map<string, fishType>([
     ['Alligator Gar', 
         {
             image: AlligatorGar,

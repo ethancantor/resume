@@ -8,7 +8,6 @@ import Autocomplete from './FishAutocomplete';
 export const GuessTheFishCard = ({ fish, listOfFish, dateStr }: { fish: string, listOfFish: string[], dateStr: string }) => {
 
     const { image, latinName, size, location, eat } = useMemo(() => {
-        console.log(fish);
         return fishMap.get(fish) as fishType;
     }, [fish]);
 
@@ -18,7 +17,7 @@ export const GuessTheFishCard = ({ fish, listOfFish, dateStr }: { fish: string, 
     const [correctGuess, setCorrectGuess] = React.useState(false);
 
     useLayoutEffect(() => {
-        const saved = localStorage.getItem(dateStr);
+        const saved = localStorage.getItem(`fishtory_${dateStr}`);
         const savedObject = saved ? JSON.parse(saved) : { guesses: [], correctGuess: false };
 
         setGuessList(savedObject.guesses || []);
@@ -36,9 +35,9 @@ export const GuessTheFishCard = ({ fish, listOfFish, dateStr }: { fish: string, 
             setSelectNum(guessList.length + 2);
             if(textGuess.toLowerCase() === fish.toLowerCase()){
                 setCorrectGuess(true);
-                localStorage.setItem(dateStr, JSON.stringify({ guesses: [...guessList, textGuess], correctGuess: true }));
+                localStorage.setItem(`fishtory_${dateStr}`, JSON.stringify({ guesses: [...guessList, textGuess], correctGuess: true }));
             } else {
-                localStorage.setItem(dateStr, JSON.stringify({ guesses: [...guessList, textGuess], correctGuess: false }));
+                localStorage.setItem(`fishtory_${dateStr}`, JSON.stringify({ guesses: [...guessList, textGuess], correctGuess: false }));
             }
         };
     }

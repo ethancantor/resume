@@ -26,6 +26,9 @@ export default function FishPage({ params } : { params: { date: string } }) {
     return (
         <div className={`text-xl gap-2 py-10 flex flex-col items-center justify-center h-screen w-screen`}>
             <div className={`text-6xl ${FISH_TITLE_FONT.className} text-center w-full h-fit`}>Guess The Fish</div>
+            <div className="flex flex-row gap-2">
+                <Link href="../" className='bg-primary text-white rounded-lg px-4 py-2 text-xl font-bold'>Home</Link>
+            </div>
             <div className=' w-full h-[50vh] flex items-center justify-center relative'>
                 <div className='absolute w-fit h-fit top-0'>
                     <GuessTheFishCard fish={fishArray[random]} listOfFish={fishArray} dateStr={dateStr} />  

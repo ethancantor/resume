@@ -10,10 +10,10 @@ export default function GuessHistoryRow({ date, value }: { date: string, value: 
     const finished = guesses.length === 5; 
     
     return (
-        <Link className="flex flex-row gap-2 cursor-pointer bg-zinc-800 rounded-xl px-2 py-2 items-center justify-center"
+        <Link className="flex flex-row gap-1 cursor-pointer bg-zinc-800 rounded-xl px-2 py-2 items-center justify-center"
             href={`/guess-the-fish/daily/${date}`}
         >
-            <div className="text-xl w-32 flex items-center justify-center">{date.replaceAll('.', '/')}: </div>
+            <div className="text-xl w-32 flex items-center justify-center">{date.replaceAll('.', '/').replace('fishtory_', '')}: </div>
             { 
                 Array(5).fill(0).map((_, index) => {
                     let bg = 'bg-zinc-700'

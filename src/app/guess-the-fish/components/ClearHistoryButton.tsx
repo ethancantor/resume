@@ -1,20 +1,20 @@
 'use client'
 import { useRouter } from "next/navigation";
-import React, { useState } from "react"
+import React, { useContext, useState } from "react"
 
 export default function ClearHistoryButton() {
 
     const [clicks, setClicks] = useState(false);
     const [clearing, setClearing] = useState(false);
-    const router = useRouter();
+
 
     const handleClick = () => {
         if(!clicks) setClicks(true);
         else {
             setClearing(true);
             localStorage.clear();
-            router.refresh();
             setTimeout(() => {
+                window.location.reload();
                 setClearing(false);
                 setClicks(false);
             }, 500);
