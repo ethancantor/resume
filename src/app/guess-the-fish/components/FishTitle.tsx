@@ -5,9 +5,9 @@ import React from "react"
 
 export default function FishTitle() {
     return (
-        <div className={`text-6xl ${FISH_TITLE_FONT.className} text-center h-fit flex flex-row gap-5 mx-auto`}>
-            <div>Guess The</div>
-            <Image src={AliveFishIcon} alt="Fish" width={60} height={60} className="invert"/>
+        <div className={`text-6xl ${FISH_TITLE_FONT.className} text-center flex flex-row flex-wrap space-x-5 mx-auto items-center justify-center`}>
+            Guess The
+            <Image src={AliveFishIcon} alt="Fish" width={60} height={60} className="invert" priority />
         </div>
     )
 };

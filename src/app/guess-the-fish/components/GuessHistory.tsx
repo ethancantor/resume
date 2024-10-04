@@ -35,13 +35,13 @@ export default function GuessHistory() {
 
     return (
         <div className="flex flex-col items-center gap-1 mb-10">
-            <div className="text-5xl">Guess History:</div>
+            <div className="text-5xl w-full text-center">Guess History:</div>
             { 
                 days.map((key) => {
                     return <GuessHistoryRow key={key} date={key} value={history[key]} />
                 })
             }
-            <Link href={`/guess-the-fish/daily/${lastDay}`} className="bg-primary text-white rounded-lg px-4 py-2 text-xl font-bold">Previous Day</Link>
+            <Link href={`/guess-the-fish/daily/${lastDay}`} className="bg-primary text-white rounded-lg px-4 py-2 text-xl font-bold my-10">Previous Day</Link>
         </div>
     )
 };
