@@ -16,7 +16,7 @@ import BassStriped from '../../public/fish/bass-striped.png';
 import BassWhite from '../../public/fish/bass-white.png';
 import BlackDrum from '../../public/fish/black-drum.png';
 import BlackJewfish from '../../public/fish/black-jewfish.png';
-import BlackRockfsh from '../../public/fish/black-rockfish.png';
+import BlackRockfish from '../../public/fish/black-rockfish.png';
 import Bluefish from '../../public/fish/bluefish.png';
 import BluenoseWarehou from '../../public/fish/bluenose-warehou.png';
 import BoharSnapper from '../../public/fish/bohar-snapper.png';
@@ -28,7 +28,7 @@ import BreamCommon from '../../public/fish/bream-common.png';
 import BreamFingermark from '../../public/fish/bream-fingermark.png';
 
 export { AlligatorGar, Amberjack, Arapaima, ArcticChar, Asp, BarracudaGreat, BarracudaPacific, Barramundi, BassAustralian, BassLargemouth,
-    BassPeacock, BassRainbow, BassSmallmouth, BassSpotted, BassStriped, BassWhite, BlackDrum, BlackJewfish, BlackRockfsh, Bluefish,
+    BassPeacock, BassRainbow, BassSmallmouth, BassSpotted, BassStriped, BassWhite, BlackDrum, BlackJewfish, BlackRockfish, Bluefish,
     BluenoseWarehou, BoharSnapper, Bonefish, Bonito, Bowfin, BreamBlack, BreamCommon, BreamFingermark
 }
 

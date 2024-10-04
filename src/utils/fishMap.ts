@@ -1,4 +1,4 @@
-import { AlligatorGar, Amberjack, Arapaima, ArcticChar, Asp, BarracudaGreat, BarracudaPacific, Barramundi, BassAustralian, BassLargemouth, BassPeacock, BassRainbow, BassSmallmouth, BassSpotted, BassStriped, BassWhite } from "@/pictures/fishdex"
+import { AlligatorGar, Amberjack, Arapaima, ArcticChar, Asp, BarracudaGreat, BarracudaPacific, Barramundi, BassAustralian, BassLargemouth, BassPeacock, BassRainbow, BassSmallmouth, BassSpotted, BassStriped, BassWhite, BlackDrum, BlackJewfish, BlackRockfish, Bluefish, BluenoseWarehou, BoharSnapper, Bonefish, Bonito, Bowfin, BreamBlack, BreamCommon, BreamFingermark } from "@/pictures/fishdex"
 import { StaticImageData } from "next/image"
 
 export type fishType = {
@@ -130,6 +130,90 @@ export const fishMap = new Map<string, fishType>([
         latinName: 'Morone chrysops',
         size: 'The average White Bass you\'ll run into is in the 10-12” range. They usually weigh between 0.5-2 lb, but larger specimens regularly go up to 4 lb. The world record for White Bass was weighed in at 6 lb 13 oz and measured 24.4”.',
         location: 'White Bass are prevalent across North America, in large lakes and reservoirs. The Great Lakes, the Ohio Valley, and the Mississippi Valley are notable locales where you can land them. They prefer large bodies of water typically deeper than 10\', with at least 300 acres of area. Clear lakes, reservoirs, and pools of small to large rivers are where you can usually find them.',
-        eat: 'It’s a very tasty fish but with a particular taste: many anglers will tell you they adore White Bass for dinner and just as many will tell you they prefer something else. They have both white and red flesh, which puts some anglers off of this tasty fish. In general, if you\'re experienced with cooking your own catch you\'ll most likely love this one. If you\'re new to cooking White Bass, try separating the red flesh (that has a strong taste) from the white flesh. Don\'t freeze it if possible and keep it in crushed ice (not a livewell) after catching it.'
+        eat: 'It\'s a very tasty fish but with a particular taste: many anglers will tell you they adore White Bass for dinner and just as many will tell you they prefer something else. They have both white and red flesh, which puts some anglers off of this tasty fish. In general, if you\'re experienced with cooking your own catch you\'ll most likely love this one. If you\'re new to cooking White Bass, try separating the red flesh (that has a strong taste) from the white flesh. Don\'t freeze it if possible and keep it in crushed ice (not a livewell) after catching it.'
+    }],
+    ['Black Drum', {
+        image: BlackDrum,
+        latinName: 'Pogonias cromis',
+        size: 'These fish grow to impressive sizes, seeing as they\'re mostly found inshore. The average catch will be between 5 and 30lbs, but giants in excess of 90lbs are not uncommon. Their estimated life expectancy is about 60 years.',
+        location: 'Black Drum can be found in western Atlantic waters, from Nova Scotia to the north of Mexico, and from south Brazil to Argentina. They are especially abundant off Texas and the largest fish can be found between Florida and the Delaware Bay.',
+        eat: 'Black Drum up to 15lb have a moderate taste similar to Redfish. Larger fish usually have tougher meat, their scales are hard to remove and they can be infested with parasites, so it\'s recommended only to keep smaller ones for food.'
+    }],
+    ['Black Jewfish', {
+        image: BlackJewfish,
+        latinName: 'Protonibea diacanthus',
+        size: 'Black Jewfish can reach up to 150 cm in length, but typically grow to about 80 cm. They are known to weigh up to 45 kg.',
+        location: 'This species used to be fairly widespread in the waters between Asia and Australia, but today it\'s mainly limited to the north coast of Australia. Anglers often catch Black Jewfish in cloudy coastal waters, in water up to 60 m deep. These fish make their way everywhere from tidal rivers and estuaries to offshore reefs. Black Jewfish living offshore tend to be larger, from 75-150 cm in length. In the Northern Territory, December and January are considered peak months for these fish.',
+        eat: 'This fish is excellent for eating, with pale pink flesh and a distinct flavor. Catch yourself a keeper and you\'ll be able to experience the quality of this fish both in sport and in food value!'
+    }],
+    ['Black Rockfish', {
+        image: BlackRockfish,
+        latinName: 'Sebastes melanops',
+        size: 'The largest varieties usually weigh in at around 11 pounds, and can grow up to 26 inches in length. The California record currently stands at just over 9 pounds, but Black Rockfish are more commonly hooked in the 5 lb range.',
+        location: 'Black Rockfish can be found all throughout the Eastern Pacific\'s waters, from the ocean surface to around 1,200 feet beneath. They tend to prefer shallower rocky waters and are a main staple of reefs, as well as deep banks and dropoffs. They\'re popular and plentiful all along North America\'s West Coast, with California standing out as a real Black Rockfish magnet.',
+        eat: 'Very! This species in general are a popular food fish all along the West Coast. Make sure you follow local regulations regarding bag and size limits, and your Black Rockfish battle will see you rewarded with some tasty dinner options.'
+    }],
+    ['Bluefish', {
+        image: Bluefish,
+        latinName: 'Pomatomus saltatrix',
+        size: 'The largest specimens that can only be found in offshore waters, can reach a whopping 50\'\' and over 30lbs. Nearshore Atlantic fish average between 8 and 23\'\' and from 3 up to 15lbs, while Gulf water fish are normally smaller than that. Large fish are common occurrence off the coast of Africa.',
+        location: 'Bluefish can be found worldwide in tropical and subtropical waters, but with sporadic presence. The western Atlantic sees them along the east coast of North America, from Nova Scotia to the Upper Keys, with a popular hotspot being New Jersey. They are present on the Atlantic coast of Florida waters from October through April, with the largest fish starting their migration northwards and eastwards to open waters around March for the summer and fall spawning. Off the Gulf coast, smaller fish can be found up to the Panhandle year-round, but they tend to migrate south come fall.',
+        eat: 'Smaller fish are good table fare. However, their flesh mushes up quickly and does not freeze well at all, so they should only be consumed fresh. Do not consume the dark lateral line in the center of the fish.'
+    }],
+    ['Bluenose Warehou', {
+        image: BluenoseWarehou,
+        latinName: 'Hyperoglyphe antarctica',
+        size: 'Bluenose Warehou can grow to 140 cm in length, but typically measure 60 cm and 3kg. This fish is known to grow as long as 1.4 m and can weigh up to 50 kg.',
+        location: 'Bluenose Warehou inhabit the southern hemisphere, in the southwest and southeast Atlantic Ocean as well as the west Indian Ocean. Anglers catch this fish off the coasts of South Africa, New Zealand, and Australia. Bluenose Warehou live in waters anywhere form 40-1,500 meters deep and are usually caught in depths of 100-600 m. This deepwater fish likes hanging around the edges of canyons and steep drop offs. They venture closer to the ocean\'s surface at night to feed, which makes this species a popular target on overnight fishing charters in New Zealand.',
+        eat: 'Bluenose Warehou make for very good table fare. This species is targeted by commercial fishermen and often sold as “Groper.” Catch one yourself, and the satisfaction of your own accomplishment will make it taste even better!'
+    }],
+    ['Bohar Snapper', {
+        image: BoharSnapper,
+        latinName: 'Lutjanus bohar',
+        size: 'The typical Bohar Snapper will be between 2 and 5kg, but the species can grow over 15kg.',
+        location: 'They are found throughout the Indo-Pacific Ocean, stretching to south Japan, east Africa, north Australia and the Marquesas Islands. They form spawning aggregations at the surface, on a monthly basis even in certain waters (for example, off the Solomon Islands and Papua New Guinea). At other times, they can be found up to 180m deep, but mostly not deeper than 70m.',
+        eat: 'Fair food value, but is avoided due to frequently being linked with ciguatera (fish poisoning) in some places.'
+    }],
+    ['Bonefish', {
+        image: Bonefish,
+        latinName: 'Albula vulpes',
+        size: 'This species doesn\'t grow too large, but that doesn\'t cloud the fact that it\'s one of the toughest saltwater fighters, pound for pound. In Florida and the Bahamas they will average at 4-6lbs, while down south in the West Indies they\'ll be about twice that size. In South African and Hawaiian waters they are said to grow up to 20lbs, even though the official world record stands at 16lbs. They live relatively long lives of about 19 years and mature quickly, at 3-4.',
+        location: 'Bonefish can be found in tropical and subtropical waters worldwide. The highest concentrations are in the western Atlantic, from Nova Scotia to Brazil, including Bermuda, Turks and Caicos Islands and the Caribbean Sea, and excluding the Gulf of Mexico. Additionally, they are commonly found off South Africa, Hawaii and in the eastern Pacific from the SF Bay Area down to Peru, mainly in the San Diego Bay.',
+        eat: 'As their name says, way too many tiny and large bones on the inside. Due to this and excellent fighting qualities for which the fish is revered, the practice of catch and release is not questioned.'
+    }],
+    ['Bonito', {
+        image: Bonito,
+        latinName: 'Sarda sarda / Sarda chiliensis',
+        size: 'The Pacific Bonito outweigh their Atlantic relatives, but both species are usually caught up to a maximum of 30\'\' and 10-12lbs.',
+        location: 'Atlantic Bonito can be caught throughout the eastern and western Atlantic ocean, as north as Nova Scotia/Scandinavia and as south as Argentina/South Africa, with the most important fisheries being the Mediterranean and Black Seas. There are few of these fish in the Gulf of Mexico and the Caribbean Sea (however, the eastern side of the archipelago sees good action). April through September will be the best time.',
+        eat: 'A very oily fish, often canned and marketed as tuna (not in the US), however, is of lesser quality. Popular as food in the Mediterranean region.'
+    }],
+    ['Bowfin', {
+        image: Bowfin,
+        latinName: 'Amia calva',
+        size: 'Adult Bowfin females may reach 30 inches (75 cm), obtain a weight of 8½ pounds (3.8 kg) and, live approximately 12 years. Adult males may grow to attain a length of 18-24 in (457 - 610 mm)',
+        location: 'The species is native to the southeast of the USA, inhabiting the area from St Lawrence River to the north, south to the Gulf Coast, and between eastern Texas to the whole of Florida.',
+        eat: 'Bowfin are rarely sought-after for food as their meat is fairly bland with a poor texture. They can be good if they are cleaned properly and smoked or fried into fishcakes. Their relatively poor flavor is redeemed by their quality as a sport fish.'
+    }],
+    ['Black Bream', {
+        image: BreamBlack,
+        latinName: 'Acanthopagrus butcheri',
+        size: 'The average Black Bream you\'re likely to catch weighs around half that, but it still puts up a real fight for its size! Black Bream are slow-growing, taking around 3-5 years to reach maturity.',
+        location: 'You can find Southern Black Bream in estuaries and inshore waters all along Australia\'s south coast. Juvenile fish live in rivers, moving out to bays and estuary mouths when they are fully-grown. Eastern Black Bream are found on Australia\'s east coast.',
+        eat: 'Absolutely! Their meat is very moist and flavorful and they are caught commercially as well as recreationally.'
+    }],
+    ['Common Bream', {
+        image: BreamCommon,
+        latinName: 'Abramis Brama',
+        size: 'Common Bream can grow to over 10 lbs, and fish in the 8 lb range are regularly caught in top Common Bream fishing spots.',
+        location: 'Common Bream live all over Europe and Central Asia, from downtown Dublin to the wilds of Siberia. They prefer living in stillwaters — look for them in deep, slow-flowing rivers, lakes, and canals with rich, muddy bottoms.',
+        eat: 'The word that comes up time and time again when describing Common Bream is “insipid.” This is a fancy way of saying “not very tasty.” Their flesh is bony and hard without much flavor, although they\'re dried and salted as a beer snack in Russia. Anglers catch Bream for the sheer fun of pulling in fish after fish, or in search of a record breaker.'
+    }],
+    ['Fingermark Bream', {
+        image: BreamFingermark,
+        latinName: 'Lutjanus Johnii',
+        size: 'Fingermark Bream reach 90-100 cm in length and weigh around 8 kg (17 lbs). Even smaller specimens put up a good fight when hooked!',
+        location: 'This species is distributed along the coast of northern Australia, south of Japan, and from East Africa to Fiji. Fingermark Breams prefer shallow inshore reefs, estuary systems, and waters slightly warmer than average. Fish which live farther from shore tend to grow larger',
+        eat: 'Fingermark Bream make for excellent table fare. One bite of this fish and you\'ll see why they\'re popular among anglers! '
     }],
 ])
