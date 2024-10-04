@@ -1,9 +1,8 @@
 import React from 'react'
 import Link from 'next/link';
-import { FISH_TITLE_FONT } from '@/fonts';
-import Image from 'next/image';
-import { AliveFishIcon } from '@/pictures/icons/icons.index';
 import FishTitle from './components/FishTitle';
+import { fishMap } from '@/utils/fishMap';
+import FishFooter from './components/FishFooter';
 
 /**
  * A page that displays a random fish and a GuessTheFishCard to guess it.
@@ -21,11 +20,7 @@ export default function FishPage() {
                 <Link href={`./guess-the-fish/daily/${dateStr}`} className='bg-primary text-white rounded-lg px-4 py-2 text-2xl font-bold'>Daily</Link>
                 <Link href='./guess-the-fish/history' className='bg-primary text-white rounded-lg px-4 py-2 text-2xl font-bold'>History</Link>
             </div>
-            <div className='text-sm flex flex-col text-center'>
-                <p>Inspired by <Link href='https://guessthe.game/' className='underline text-primary'>Guess the Game</Link> and <Link href="https://tacklevillage.com/fishdle-game/" className='underline text-primary'>Fishdle</Link></p>
-                <p>Fish facts from <Link href='https://fishingbooker.com/fish' className='underline text-primary'>Fishing Booker</Link></p>
-                <p>Created by <Link href='https://github.com/ethancantor' className='underline text-primary'>Ethan Cantor</Link></p>
-            </div>
+            <FishFooter />
         </div>
     )
 };
