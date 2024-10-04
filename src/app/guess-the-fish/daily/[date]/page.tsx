@@ -5,6 +5,7 @@ import { GuessTheFishCard } from '../../components/GuessTheFishCard';
 import { redirect } from 'next/navigation';
 import { FISH_TITLE_FONT } from '@/fonts';
 import { fishMap } from '@/utils/fishMap';
+import FishTitle from '../../components/FishTitle';
 
 /**
  * A page that displays a random fish and a GuessTheFishCard to guess it.
@@ -25,7 +26,7 @@ export default function FishPage({ params } : { params: { date: string } }) {
 
     return (
         <div className={`text-xl gap-2 py-10 flex flex-col items-center justify-center h-screen w-screen`}>
-            <div className={`text-6xl ${FISH_TITLE_FONT.className} text-center w-full h-fit`}>Guess The Fish</div>
+            <FishTitle />
             <div className="flex flex-row gap-2">
                 <Link href="../" className='bg-primary text-white rounded-lg px-4 py-2 text-xl font-bold'>Home</Link>
             </div>

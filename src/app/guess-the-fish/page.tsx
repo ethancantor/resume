@@ -1,6 +1,9 @@
 import React from 'react'
 import Link from 'next/link';
 import { FISH_TITLE_FONT } from '@/fonts';
+import Image from 'next/image';
+import { AliveFishIcon } from '@/pictures/icons/icons.index';
+import FishTitle from './components/FishTitle';
 
 /**
  * A page that displays a random fish and a GuessTheFishCard to guess it.
@@ -13,7 +16,7 @@ export default function FishPage() {
 
     return (
         <div className={`text-xl flex flex-col gap-5 mt-5 items-center justify-center`}>
-            <div className={`text-6xl ${FISH_TITLE_FONT.className} text-center w-full h-fit`}>Guess The Fish</div>
+            <FishTitle />
             <div className='flex flex-row gap-3'>
                 <Link href={`./guess-the-fish/daily/${dateStr}`} className='bg-primary text-white rounded-lg px-4 py-2 text-2xl font-bold'>Daily</Link>
                 <Link href='./guess-the-fish/history' className='bg-primary text-white rounded-lg px-4 py-2 text-2xl font-bold'>History</Link>
