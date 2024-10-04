@@ -11,7 +11,7 @@ export default function GuessHistoryRow({ date, value }: { date: string, value: 
     
     return (
         <Link className="flex flex-row gap-1 cursor-pointer bg-zinc-800 rounded-xl px-2 py-2 items-center justify-center"
-            href={`/guess-the-fish/daily/${date}`}
+            href={`/guess-the-fish/daily/${date.replace('fishtory_', '')}`}
         >
             <div className="text-xl w-32 flex items-center justify-center">{date.replaceAll('.', '/').replace('fishtory_', '')}: </div>
             { 

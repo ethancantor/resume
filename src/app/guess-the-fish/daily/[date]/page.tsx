@@ -2,9 +2,9 @@ import React from 'react'
 import Link from 'next/link';
 import { useSeededRandom } from '@/hooks/use-seeded-random';
 import { GuessTheFishCard } from '../../components/GuessTheFishCard';
-import { fishMap } from '../../../../../public/fish';
 import { redirect } from 'next/navigation';
 import { FISH_TITLE_FONT } from '@/fonts';
+import { fishMap } from '@/utils/fishMap';
 
 /**
  * A page that displays a random fish and a GuessTheFishCard to guess it.

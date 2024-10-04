@@ -1,9 +1,9 @@
 'use client';
 
 import React, { useLayoutEffect, useMemo } from 'react'
-import { fishMap, fishType } from '../../../../public/fish';
 import Image from 'next/image';
 import Autocomplete from './FishAutocomplete';
+import { fishMap, fishType } from '@/utils/fishMap';
 
 export const GuessTheFishCard = ({ fish, listOfFish, dateStr }: { fish: string, listOfFish: string[], dateStr: string }) => {
 
