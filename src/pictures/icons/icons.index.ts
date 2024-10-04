@@ -10,4 +10,8 @@ import MusicIcon from '@/pictures/icons/music-icon.svg';
 
 import BackToTopIcon from '@/pictures/icons/up-arrow-svgrepo-com.svg';
 
-export { BurgerIcon, ChevronIcon, EmailIcon, MusicIcon, ResumeIcon, SkillsIcon, ProjectsIcon, ExperienceIcon, BackToTopIcon };
+import DeadFishIcon from '@/pictures/icons/fish-bone-1-svgrepo-com.svg';
+import AliveFishIcon from '@/pictures/icons/fish-svgrepo-com.svg';
+import RodIcon from '@/pictures/icons/fishing-svgrepo-com.svg';
+
+export { BurgerIcon, ChevronIcon, EmailIcon, MusicIcon, ResumeIcon, SkillsIcon, ProjectsIcon, ExperienceIcon, BackToTopIcon, DeadFishIcon, AliveFishIcon, RodIcon };
