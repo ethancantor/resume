@@ -1,19 +1,23 @@
-import Image from 'next/image'
 import React from 'react'
-import { fishMap } from '../../../public/fish'
-import { BODY_FONT } from '@/fonts';
-import { GuessTheFishCard } from './components/GuessTheFishCard';
 import Link from 'next/link';
+import { FISH_TITLE_FONT } from '@/fonts';
 
-export default function fish() {
+/**
+ * A page that displays a random fish and a GuessTheFishCard to guess it.
+ * The fish is randomly selected from the fishMap, which is a map of fish names to their properties.
+ * The page also displays attribution to the inspired games and the source of the fish facts.
+ */
+export default function FishPage() {
 
-    const allFish = fishMap.keys();
-    const fishArray = Array.from(allFish);
+    const dateStr = new Date(Date.now()).toLocaleDateString().replace(/\//g, '.');
 
     return (
-        <div className={`${BODY_FONT.className} text-xl flex flex-col gap-2 py-10 items-center w-screen h-screen overflow-auto`}>
-            <div className='text-6xl'>Guess The Fish</div>
-            <GuessTheFishCard fish={fishArray[2]} listOfFish={fishArray} />
+        <div className={`text-xl flex flex-col gap-5 mt-5 items-center justify-center`}>
+            <div className={`text-6xl ${FISH_TITLE_FONT.className} text-center w-full h-fit`}>Guess The Fish</div>
+            <div className='flex flex-row gap-3'>
+                <Link href={`./guess-the-fish/${dateStr}`} className='bg-primary text-white rounded-lg px-4 py-2 text-2xl font-bold'>Daily</Link>
+                <Link href='' className='bg-primary text-white rounded-lg px-4 py-2 text-2xl font-bold'>Free Play</Link>
+            </div>
             <div className='text-sm flex flex-col text-center'>
                 <p>Inspired by <Link href='https://guessthe.game/' className='underline text-primary'>Guess the Game</Link> and <Link href="https://tacklevillage.com/fishdle-game/" className='underline text-primary'>Fishdle</Link></p>
                 <p>Fish facts from <Link href='https://fishingbooker.com/fish' className='underline text-primary'>Fishing Booker</Link></p>
