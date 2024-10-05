@@ -1,4 +1,4 @@
-import { AlligatorGar, Amberjack, Arapaima, ArcticChar, Asp, BarracudaGreat, BarracudaPacific, Barramundi, BassAustralian, BassLargemouth, BassPeacock, BassRainbow, BassSmallmouth, BassSpotted, BassStriped, BassWhite, BlackDrum, BlackJewfish, BlackRockfish, Bluefish, BluenoseWarehou, BoharSnapper, Bonefish, Bonito, Bowfin, BreamBlack, BreamCommon, BreamFingermark } from "@/pictures/fishdex"
+import { AlligatorGar, Amberjack, Arapaima, ArcticChar, Asp, BarracudaGreat, BarracudaPacific, Barramundi, BassAustralian, BassLargemouth, BassPeacock, BassRainbow, BassSmallmouth, BassSpotted, BassStriped, BassWhite, BlackDrum, BlackJewfish, BlackRockfish, Bluefish, BluenoseWarehou, BoharSnapper, Bonefish, Bonito, Bowfin, BreamBlack, BreamCommon, BreamFingermark, BrookTrout, BrownTrout, Bullhead, Burbot, CalicoBass, CaliforniaCorbina, Carp, Catfish, CeroMackerel, Clam } from "@/pictures/fishdex"
 import { StaticImageData } from "next/image"
 
 export type fishType = {
@@ -205,5 +205,75 @@ export const fishMap = new Map<string, fishType>([
         size: 'Fingermark Bream reach 90-100 cm in length and weigh around 8 kg (17 lbs). Even smaller specimens put up a good fight when hooked!',
         location: 'This species is distributed along the coast of northern Australia, south of Japan, and from East Africa to Fiji. Fingermark Breams prefer shallow inshore reefs, estuary systems, and waters slightly warmer than average. Fish which live farther from shore tend to grow larger',
         eat: 'Fingermark Bream make for excellent table fare. One bite of this fish and you\'ll see why they\'re popular among anglers! '
+    }],
+    ['Brook Trout', {
+        image: BrookTrout,
+        latinName: 'Salvelinus fontinalis',
+        size: 'At maturity, wild Brook Trout may be from five inches to 18 inches long, according to the availability of food in the home stream.',
+        location: 'This attractive species is native to the north east of North America, mainly inhabiting areas from the Great Lakes to the Atlantic coast and up to the Arctic coast. Prefering cold, clear waters, it is most commonly found in mountain streams and lakes where water temperatures remain under about 55°F. Thanks to its popularity as a game and eating fish, it has been introduced to Argentina and Europe.',
+        eat: 'Even though Brook Trout is a famously high quality food fish, it is common to practice catch and release to preserve the species. If you do intend to keep the fish, make sure to only retain what you intend to eat.'
+    }],
+    ['Brown Trout', {
+        image: BrownTrout,
+        latinName: 'Salmo trutta',
+        size: 'Brown Trout are medium-sized fish and can grow to over 44 lbs (20 kg) and up to 39 in (100 cm) long in some places (although this is very rare). However, it is common for mature Brown Trout found in smaller rivers to weigh in at about 2.2 lbs (1kg) or even less.',
+        location: 'The Brown Trout is native to Europe and some parts of Asia, and has been widely introduced to other areas worldwide. Now, it can be found across the United States, in the Great Lakes in Michigan, Wisconsin, Ohio, Illinois, Minnesota, and New York in the United States, and Ontario, in Canada. Apart from being found in the Great Lakes, Brown Trout can be caught in the USA from the Appalachians up to the north of Georgia, as well as many other states, including Montana, Colorado, and many more areas.',
+        eat: 'Very good to eat, although they are also commonly caught and released.'
+    }],
+    ['Bullhead', {
+        image: Bullhead,
+        latinName: 'Ameiurus melas/nebulosus/natalis',
+        size: 'The three species are similar in size, with the Black Bullhead being somewhat larger on average than the other two. Most catches are between 8 and 15\'\' and up to 5lbs.',
+        location: 'Black Bullhead can be found throughout the Great Lakes and St Lawrence River, but also natively in southern Ontario and throughout the central USA and non-natively outside this range. Brown Bullhead occurs in the eastern USA as far as Alabama and in southern Canada. It has also been introduced throughout the continent. They live in deeper waters than other species. Yellow Bullhead can be found in the central and eastern USA as far as western Texas. They have been introduced elsewhere, too. They prefer shallow and weedy waters.',
+        eat: 'All three types of Bullheads make for great table fare.'
+    }],
+    ['Burbot', {
+        image: Burbot,
+        latinName: 'Lota lota',
+        size: 'Burbot are commonly caught up to 8lbs, but can grow to almost 50\'\' and over 25lbs.',
+        location: 'The species can be found throughout the world at latitudes over 40° N. They are common in many lakes and streams across Alaska and Canada, including the Great Lakes, but excluding Nova Scotia and and the Atlantic islands. They can also be found throughout northern Eurasia, but are considered extinct in the British Isles.',
+        eat: 'The flesh is said to taste similar to lobster. The roe is also consumed.'
+    }],
+    ['Calico Bass', {
+        image: CalicoBass,
+        latinName: 'Paralabrax clathratus',
+        size: 'Calico Bass are very slow growing. It takes them at least 5 years to hit spawning size (around 12”) and large fish can be over 30 years old. Most fish are around 14-15” and weigh 1-2 lbs. Anything over 4 lbs is considered a serious trophy in California, with bigger fish caught down in Baja California. The IGFA all-tackle record stands at 14 lbs, 7 oz.',
+        location: 'Calico Bass can be found along the west coast of America, from the Columbia River in Washington to the Magdalena Bay in Baja, Mexico. They mainly live in or near kelp beds, but can also be found around reefs, rocky structure, and jetties. They normally live in bays, but have been found as deep as 150\'. Calico Bass are non-migratory, so they can actually be caught year-round. The best time to try is during their spawning season from May through September.',
+        eat: 'Their flaky, white meat is mild in flavor and low in oil, making it perfect for the fryer. They can also be great sauteed or baked with oil or butter. Many fish-lovers even eat them raw or use the meat to make ceviche if they’re fresh enough. Their mild flavor might be underwhelming compared to more traditional sashimi favorites, though.'
+    }],
+    ['California Corbina', {
+        image: CaliforniaCorbina,
+        latinName: 'Menticirrhus undulatus',
+        size: 'The largest recorded specimen was 28\'\' long and 8.5lbs heavy, but the average fish will be between 14 and 24\'\' and about 1lb.',
+        location: 'California Corbina can be found on beaches and in shallow bays from Point Conception, CA to Peru, but also offshore during the summer spawning. They are caught year-round, but the most optimal time is July through October, with the influx of warm water and sand crabs.',
+        eat: 'They are excellent table fish.'
+    }],
+    ['Carp', {
+        image: Carp,
+        latinName: 'Cyprinus carpio',
+        size: 'Carp stay around the same length, but are able to grow to substantial sizes in width. Fish are commonly caught between 5 and 30lbs (2.5 and 15kg).',
+        location: 'Native to temperate Asia and Europe (especially the Black and Aegean Seas and tributaries), the Carp is now a cosmopolitan fish with many subspecies that can be found throughout the USA and southern Canada, but all other continents as well.',
+        eat: 'Considered a delicacy in Europe and Asia, but underappreciated in North America.'
+    }],
+    ['Catfish', {
+        image: Catfish,
+        latinName: 'Ictalurus punctatus/furcatus; Pylodictis olivaris; Ameiurus catus',
+        size: 'The Channel Catfish is the smallest, known to attain weights up to 60lbs, but commonly caught only up to 10lbs. The Blue Catfish is the largest, growing up to 150lbs and caught on average between 20 and 40lbs. The Flathead Catfish is substantial as well, with the largest catch on record 123lbs and with frequent catches between 5 and 15lbs. The White Catfish (Ameiurus catus) is closer to the family of Bullheads. They grow up to 20lbs, but the majority are caught only between 1 and 3lbs. Gafftopsail Catfish are the smallest of the bunch and are most frequent up to 2lbs.',
+        location: 'The Channel Catfish is common thoughout central USA and can be found in northern Mexico and southern Canada. They migrate actively throughout river tributaries and streams during spawning season. The Blue Catfish is native to the major rivers of the Ohio, Mississippi and Missouri basins. They can also be found north to South Dakota and Minnesota, east to the Panhandle and south to Mexico and Guatemala. They have been artificially introduced to rivers in Virginia. They like fast currents and are active throughout winter as well. The Flathead Catfish can be found throughout the Blue Catfish range, but extends farther east to Lake Eerie. They have been broadly introduced outside this range. The White Catfish inhabits coastal waters of the western Atlantic from New York to central Florida. It\'s been introduced to Texas and throughout the west coast. Gafftopsail Catfish are distributed throughout the southeastern USA as north as New York and throughout the Gulf coast. They spawn inshore May through August.',
+        eat: 'Most Catfish are succulent and mild in flavor.'
+    }],
+    ['Cero Mackerel', {
+        image: CeroMackerel,
+        latinName: 'Scomberomorus regalis',
+        size: 'Cero Mackerel are also somewhat bigger than Spanish fish of the same species and are common up to about 10lbs. The maximum size reported is 22lbs.',
+        location: 'The species ranges from Massachusetts to Brazil, but is rare north of Palm Beach, FL. They are abundant in the Keys, the Bahamas and throughout the Caribbean Sea. They can be caught year-round and spawning takes place offshore during summer.',
+        eat: 'Arguably the best tasting of all of the same species. They are considered to yield sashimi-grade meat by some and are delicious when consumed raw.'
+    }],
+    ['Clam', {
+        image: Clam,
+        latinName: 'Spisula solidissima',
+        size: 'Clams may be small, but they live a surprisingly long time. Even the ones in your local fish market could be over 30 years old. Some species are known to live for centuries! ',
+        location: 'Clamming is a popular pastime all along the East Coast, usually harvesting Atlantic Surf Clams. They\'re not just in the US, though. Clams are an important harvest all over the world, from Italy to India and beyond. Clam season is at its best in the summer. Head down to the beach at low tide and get some!',
+        eat: 'Absolutely! From Clam chowder to spaghetti alle vongole, these delicious shellfish make for one of the tastiest sauces out there. And the best thing is that if you don\'t like them, there are plenty of fish out there that do!'
     }],
 ])

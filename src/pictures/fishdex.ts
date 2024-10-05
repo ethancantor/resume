@@ -26,10 +26,30 @@ import Bowfin from '../../public/fish/bowfin.png';
 import BreamBlack from '../../public/fish/bream-black.png';
 import BreamCommon from '../../public/fish/bream-common.png';
 import BreamFingermark from '../../public/fish/bream-fingermark.png';
+import BrookTrout from '../../public/fish/brook-trout.png';
+import BrownTrout from '../../public/fish/brown-trout.png';
+import Bullhead from '../../public/fish/bullhead.png';
+import Burbot from '../../public/fish/burbot.png';
+import CalicoBass from '../../public/fish/calico-bass.png';
+import CaliforniaCorbina from '../../public/fish/california-corbina.png';
+import Carp from '../../public/fish/carp.png';
+import Catfish from '../../public/fish/catfish.png';
+import CeroMackerel from '../../public/fish/cero-mackerel.png';
+import Clam from '../../public/fish/clam.png';
+import ClownKnifeFish from '../../public/fish/clown-knife-fish.png';
+import Cobia from '../../public/fish/cobia.png';
+import CodBlue from '../../public/fish/cod-blue.png';
+import CodBreaksea from '../../public/fish/cod-breaksea.png';
+import Cod from '../../public/fish/cod.png';
+import CommonLing from '../../public/fish/common-ling.png';
+import CommonPandora from '../../public/fish/common-pandora.png';
+import CongerEel from '../../public/fish/conger-eel.png';
 
 export { AlligatorGar, Amberjack, Arapaima, ArcticChar, Asp, BarracudaGreat, BarracudaPacific, Barramundi, BassAustralian, BassLargemouth,
     BassPeacock, BassRainbow, BassSmallmouth, BassSpotted, BassStriped, BassWhite, BlackDrum, BlackJewfish, BlackRockfish, Bluefish,
-    BluenoseWarehou, BoharSnapper, Bonefish, Bonito, Bowfin, BreamBlack, BreamCommon, BreamFingermark
+    BluenoseWarehou, BoharSnapper, Bonefish, Bonito, Bowfin, BreamBlack, BreamCommon, BreamFingermark, BrookTrout, BrownTrout,
+    Bullhead, Burbot, CalicoBass, CaliforniaCorbina, Carp, Catfish, CeroMackerel, Clam, ClownKnifeFish, Cobia, CodBlue, CodBreaksea,
+    Cod, CommonLing, CommonPandora, CongerEel,
 }
 
 
