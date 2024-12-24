@@ -35,9 +35,9 @@ export const AboutMeHeader = () => {
                 <Link href={'/files/Ethan_Cantor_Resume.pdf'}>
                     <HexIcon icon={ResumeIcon} name='Resume'/>
                 </Link>
-                <Link href={'./guess-the-fish'}>
+                {/* <Link href={'./guess-the-fish'}>
                     <HexIcon icon={AliveFishIcon} name='Fish' invert/>
-                </Link>
+                </Link> */}
             </div>
             <motion.div className={`flex ${width < 500 ? 'flex-row w-full' : 'flex-col'} flex-wrap h-fit z-20 fixed top-0 left-0  justify-center border-primary border-2 bg-raisin-dark rounded-2xl`}
                 variants={variants} animate={isInView ? 'hide' : 'show'} initial={'hide'}  
@@ -53,9 +53,9 @@ export const AboutMeHeader = () => {
                 <Link href={'/files/Ethan_Cantor_Resume.pdf'}>
                     <HeaderHexIcon icon={ResumeIcon} name='Resume' isMobile={width < 500}/>
                 </Link>
-                <Link href={'./guess-the-fish'}>
+                {/* <Link href={'./guess-the-fish'}>
                     <HeaderHexIcon icon={AliveFishIcon} name='Fish' isMobile={width < 500} invert/>
-                </Link>
+                </Link> */}
             </motion.div>
         </>
     )

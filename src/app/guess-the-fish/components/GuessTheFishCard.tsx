@@ -49,7 +49,7 @@ export const GuessTheFishCard = ({ fish, listOfFish, dateStr }: { fish: string, 
     return (
         <div className={`bg-zinc-800 ${reveal && (correctGuess ? 'outline outline-green-600 outline-2' : 'outline outline-2 outline-red-600 ')} drop-shadow-lg rounded-lg px-10 py-3 flex flex-col items-center text-lg gap-2 w-96 mb-10`}>
             <div className={`w-fit rounded-xl h-fit bg-zinc-700 flex flex-row items-center justify-center ${reveal && (correctGuess ? 'outline outline-green-600 outline-1' : 'outline outline-red-600 outline-1')}`}>
-                <Image className={`h-fit rounded-lg ${selectNum < 5 && !reveal && 'brightness-0 drop-shadow-xl'} `} src={image || ''} alt="Card image" width={250} height={250} />
+                <Image className={`h-fit rounded-lg ${selectNum < 5 && !reveal && 'brightness-0 drop-shadow-xl'} pointer-events-none`} src={image || ''} alt="Card image" width={250} height={250} />
             </div>
             <div className={`${selectNum > 5 || reveal ? 'opacity-100 h-fit' : 'opacity-0 h-0'} text-4xl`}>{fish}</div>
             <div className={`${(reveal && !correctGuess) ? 'opacity-100 h0-fit' : 'opacity-0 h-0'} text-red-600 text-center text-base`}>Go Fish. Better Luck Next Time</div>
