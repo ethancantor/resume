@@ -14,12 +14,19 @@ import PythonIcon from '@/pictures/logos/python-5.svg';
 import ReactIcon from '@/pictures/logos/react-2.svg';
 import TailwindIcon from '@/pictures/logos/tailwindcss.svg';
 import TypeScriptIcon from '@/pictures/logos/typescript.svg';
+import PostgresIcon from '@/pictures/logos/postgresql-svgrepo-com.svg';
+import CSharpIcon from '@/pictures/logos/c-sharp-svgrepo-com.svg';
+import DenoIcon from '@/pictures/logos/deno.png';
+import BunIcon from '@/pictures/logos/bun_js.png';
+import SvelteIcon from '@/pictures/logos/svelte-svgrepo-com.svg';
 
 import MSALogo from '@/pictures/logos/MSA_Safety_Logo.svg';
 import NYBCLogo from '@/pictures/logos/new-york-blood-center.svg';
 
-export { CIcon, CPlusIcon, CSSIcon, GitHubIcon, HTMLIcon, JavaIcon, JavaScriptIcon, MaxIcon, MySQLIcon, NextAuthIcon, 
-    NextIcon, NodeIcon, PythonIcon, ReactIcon, TailwindIcon, TypeScriptIcon, 
+export {
+    CIcon, CPlusIcon, CSSIcon, GitHubIcon, HTMLIcon, JavaIcon, JavaScriptIcon, MaxIcon, MySQLIcon, NextAuthIcon,
+    NextIcon, NodeIcon, PythonIcon, ReactIcon, TailwindIcon, TypeScriptIcon, PostgresIcon, CSharpIcon, DenoIcon,
+    BunIcon, SvelteIcon,
 
-    MSALogo, NYBCLogo, 
+    MSALogo, NYBCLogo,
 }

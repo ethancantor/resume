@@ -1,19 +1,33 @@
-import { StaticImageData } from 'next/image';
-import React from 'react'
-import { HexIcon } from '../Misc/HexIcon';
+import { StaticImageData } from "next/image";
+import React from "react";
+import { HexIcon } from "../Misc/HexIcon";
 
 interface Props {
-    icon: string | StaticImageData;
-    name: string;
-    className?: string;
-    size?: number
+  icon: string | StaticImageData;
+  name: string;
+  className?: string;
+  size?: number;
+  invert?: boolean;
 }
 
-export const AboutMeIcon = ({icon, name, className, size}: Props) => {
-    return (
-        <div className={`grid grid-cols-1 justify-center items-center text-gray-300 text-sm ${className}`}>
-            <HexIcon icon={icon} width={ size || 30} height={ size || 30} name={name}/>
-        </div>
-    )
+export const AboutMeIcon = ({
+  icon,
+  name,
+  className,
+  size,
+  invert = false,
+}: Props) => {
+  return (
+    <div
+      className={`grid grid-cols-1 justify-center items-center text-gray-300 text-sm ${className}`}
+    >
+      <HexIcon
+        icon={icon}
+        width={size || 30}
+        height={size || 30}
+        name={name}
+        invert={invert}
+      />
+    </div>
+  );
 };
-
